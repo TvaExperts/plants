@@ -1,0 +1,187 @@
+/* inika-regular - latin */
+@font-face {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../assets/fonts/inika-v21-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../assets/fonts/inika-v21-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inika-700 - latin */
+@font-face {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../assets/fonts/inika-v21-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../assets/fonts/inika-v21-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../assets/fonts/inter-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../assets/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../assets/fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #636060;
+  
+  
+}
+
+.wrapper {
+  max-width: 1222px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #EDF2EC;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 42px 0px;
+}
+
+.header-logo {
+  padding-bottom: 32px;
+}
+
+.header-logo-link {
+  color: black;
+  text-decoration: none;
+  font-family: 'Inika';
+  
+}
+
+.header-nav {
+  
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  
+  
+}
+
+.header-item {
+  margin-right: 46px;
+}
+
+.header-item:last-child {
+  margin-right: 0px;
+}
+
+.header-link {
+  font-family: 'Inika';
+  font-weight: 400;
+  line-height: 50px;
+  color: #010201;
+  text-decoration: none;
+}
+
+.header-link-home {
+  font-weight: 700;
+  color: #E06733;
+}
+
+.welcome {
+  background-color: #EDF2EC;
+}
+
+.welcome-img {
+  float: left; 
+  padding-top: 62px;
+}
+
+.welcome-text {
+  padding: 98px 0px 94px 673px;
+}
+
+.welcome-title {
+  margin: 0;
+ 
+  color: #717171;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.welcome-title-green {
+  color: #499A18;
+}
+
+.welcome-subtitle {
+  margin: 0;
+  padding: 42px 0px 62px 0px;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.welcome-button {
+  padding: 14px 27px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: solid 2px #E06733;
+}
+
+.about-img {
+  float: right;
+  
+}
+
+.about-title {
+  padding-top: 161px;
+  width: 463px;
+  margin: 0;
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499A18;
+}
+
+.about-title-orange {
+  color: #E06733
+}
+
+.about-subtitle {
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 155px;
+  padding-right: 617px;
+}
