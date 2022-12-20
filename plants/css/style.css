@@ -36,13 +36,14 @@
 }
 
 html {
+
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -55,15 +56,18 @@ body {
   color: #636060;
   
   
+  
 }
 
 .wrapper {
   max-width: 1222px;
   margin: 0 auto;
+  border: solid 1px red;
 }
 
 .header {
   background-color: #EDF2EC;
+
 }
 
 .header-wrapper {
@@ -85,16 +89,10 @@ body {
   
 }
 
-.header-nav {
-  
-}
-
 .header-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  
-  
 }
 
 .header-item {
@@ -122,13 +120,24 @@ body {
   background-color: #EDF2EC;
 }
 
+.welcome-wrapper
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;  
+  align-items: flex-start;               
+
+}
 .welcome-img {
-  float: left; 
   padding-top: 62px;
+  
 }
 
 .welcome-text {
-  padding: 98px 0px 94px 673px;
+  padding-top: 98px;
+  max-width: 549px;
+  padding-bottom: 94px;
 }
 
 .welcome-title {
@@ -146,7 +155,7 @@ body {
 
 .welcome-subtitle {
   margin: 0;
-  padding: 42px 0px 62px 0px;
+  padding: 42px 0px 48px 0px;
   font-size: 20px;
   line-height: 35px;
 }
@@ -158,15 +167,27 @@ body {
   border: solid 2px #E06733;
 }
 
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;  
+  align-items: flex-start;   
+}
+
 .about-img {
-  float: right;
+  padding-top: 93px;
   
 }
 
+.about-text {
+  max-width: 605px;
+}
+
 .about-title {
+  max-width: 463px;
   padding-top: 161px;
-  width: 463px;
-  margin: 0;
+  padding-bottom: 40px;
   font-family: 'Inika';
   font-style: normal;
   font-weight: 400;
@@ -180,8 +201,49 @@ body {
 }
 
 .about-subtitle {
+  max-width: 605px;
   font-size: 20px;
   line-height: 30px;
   padding-bottom: 155px;
-  padding-right: 617px;
+}
+
+.service {
+  background-color: #EDF2EC;
+}
+
+.service-header{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;     
+}
+
+.service-title {
+  padding-top: 40px;
+  max-width: 306px;
+  
+}
+
+.service-title-text{
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499A18;
+}
+
+.service-buttons {
+  padding-left: 142px;
+  padding-top: 69px;
+}
+
+.servise-button{
+  font-size: 20px;
+  line-height: 26px;
+  color: #E06733;
+  border: 1px solid #E06733;
+  border-radius: 5px;
+  padding: 12px 40px;
+  margin-right: 38px;
 }
