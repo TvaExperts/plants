@@ -73,13 +73,13 @@ body {
 .header-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 42px 0px;
 }
 
 .header-logo {
-  padding-bottom: 32px;
+  padding-top: 8px;
 }
 
 .header-logo-link {
@@ -221,6 +221,7 @@ body {
 .service-title {
   padding-top: 40px;
   max-width: 306px;
+  padding-bottom: 90px;
   
 }
 
@@ -246,4 +247,108 @@ body {
   border-radius: 5px;
   padding: 12px 40px;
   margin-right: 38px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+  padding-bottom: 66px;
+}
+
+.service-card {
+  max-width: 330px;
+  padding-bottom: 55px;
+}
+
+.service-card-text-area {
+  border: 1px solid #E3E1D5;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.service-card-title {
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #E06733;
+
+}
+.service-card-subtitle {
+  padding-top: 14px;
+  padding-bottom: 36px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.service-card-img {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.service-img-wrapper {
+  height: 350px;
+}
+
+.prices-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.prices-left{
+  max-width: 332px;
+}
+
+.prices-left-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: black;
+  padding-bottom: 60px;
+}
+
+.prices-dropdowns {
+  
+  max-height: 282px;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+  padding-top: 34px;
+
+}
+
+.prices-dropdown {
+  padding: 0px 41px 32px 41px;
+}
+
+.dropdown-text {
+  padding: 16px 110px 16px 40px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  background-color: #EDF2EC;
+  border-radius: 20px;
+  color: black;
+}
+
+.prices-right {
+  padding-top: 40px;
+}
+
+.prices-right-title {
+  max-width: 452px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: right;
+  color: #000000;
+}
+
+.prices-right-title-green {
+  color: #499A18;
 }
