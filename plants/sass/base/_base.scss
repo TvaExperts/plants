@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    @extend  %font-primary;
+}
+
+h1 {
+    @include font(4.5rem, 5rem, bold);
+    color: $color_title;
+}
+
+h2 {
+    @include font(4rem, 5.2rem);
+    color: $color_primary;
+    @extend %font-additional;
+}
+
+h3 {
+    @include font(2rem, 2rem, bold);
+    color: $color_additional;
+   
+}

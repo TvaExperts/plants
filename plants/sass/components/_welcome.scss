@@ -1,0 +1,35 @@
+
+
+.welcome {
+    background: $color_background;
+}
+
+.welcome__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.welcome__img {
+    padding-top: 62px;
+}
+
+.welcome__content {
+    max-width: 549px;
+    padding-top: 98px;
+}
+
+.title__colored {
+    color: $color_primary;
+}
+
+.welcome__subtitle {
+    max-width: 526px;
+    padding: 42px 0px 48px 0px;
+    @include font(2rem, 3.5rem);
+    color: $color_text;
+}
+
+.welcome__button {
+    @include font(1.6rem, 2rem);
+}

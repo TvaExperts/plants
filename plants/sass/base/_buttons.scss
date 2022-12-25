@@ -1,0 +1,30 @@
+.button {
+    border: 1px solid $color_additional;
+    border-radius: 5px;
+    padding: 12px 0px;
+}
+
+.button_welcome {
+    
+    padding: 14px 27px;
+    @extend %font-primary;
+    text-transform: uppercase;
+    @extend %transition;
+    border: 2px solid $color_additional;
+
+}
+
+.button_welcome:hover {
+    background: $color_additional;
+    color: white;
+    
+}
+
+.button_service {
+    width: 161px;
+    @extend %font-additional;
+    @include font(2rem, 2.6rem);
+    color: $color_additional;
+
+}
+

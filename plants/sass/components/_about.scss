@@ -1,0 +1,27 @@
+.about__wrapper {
+    padding: 93px 0px 94px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about__content {
+    padding-top: 68px;
+
+}
+
+.about__title {
+    max-width: 463px;
+    padding-bottom: 40px;
+}
+
+.title__colored {
+    color: $color_additional;
+}
+
+.about__text {
+    max-width: 605px;
+    @include font(2rem, 3rem);
+    color: $color_text;
+
+}

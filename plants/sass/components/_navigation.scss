@@ -1,0 +1,23 @@
+
+.navigation {
+    display: flex;
+
+}
+
+.navigation__item {
+    list-style: none;
+    padding-left: 46px;
+}
+
+.navigation__link {
+    text-decoration: none;
+    @extend %font-additional;
+    color: $color_nav;
+}
+
+.navigation__link:hover {
+    
+    color: $color_additional;
+    font-weight: 700;
+    @extend %transition;
+}

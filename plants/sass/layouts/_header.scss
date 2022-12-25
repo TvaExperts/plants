@@ -1,0 +1,13 @@
+.header {
+    padding: 42px 0px;
+    background: $color_background;
+
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+   
+}

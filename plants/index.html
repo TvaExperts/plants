@@ -5,134 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We grow plants and give you oxygen</title>
-    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./sass/style.css">
 </head>
+<body>
     <header class="header">
-        <div class="wrapper">
-            <div class="header-wrapper">
-                <div class="header-logo">
-                    <a href="/" class="header-logo-link"><img src="./assets/img/logo.svg" alt="We grow plants and give you oxygen" class="header-logo-pic">Plants</a>
-                </div>
-                <nav>
-                    <ul class="header-list">
-                        <li class="header-item">
-                            <a href="!#" class="header-link header-link-home">Home</a>
-                        </li>
-                        <li class="header-item">
-                            <a href="!#" class="header-link">About us</a>
-                        </li>
-                        <li class="header-item">
-                            <a href="!#" class="header-link">Service</a>
-                        </li>
-                        <li class="header-item">
-                            <a href="!#" class="header-link">Price</a>
-                        </li>
-                        <li class="header-item">
-                            <a href="!#" class="header-link">Contacts</a>
-                        </li>
-
-                    </ul>
-
-
-                </nav>
+        <div class="wrapper header__wrapper">
+            <div class="header__logo">
+                <a href="/" class="header-logo-link"><img src="./assets/img/logo.svg" alt="We grow plants and give you oxygen" class="header-logo-pic">Plants</a>
             </div>
+            <nav class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">About us</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Service</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Price</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="main">
         <section class="welcome">
-            <div class="wrapper">
-                <div class="welcome-wrapper">
-                    <div class="welcome-img">
-                        <img src="./assets/img/welcome-leafs.png" alt="Leafs">
+            <div class="wrapper welcome__wrapper">
+                <div class="welcome__img">
+                    <img src="./assets/img/welcome-leafs.png" alt="Leafs">
+                </div>
+                <div class="welcome__content">
+                    <h1>We grow <span class="title__colored">plants</span> and give you oxygen</h1>
+                    <p class="welcome__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <div class="welcome__button">
+                        <button class="button button_welcome">Learn more</button>
                     </div>
-                    <div class="welcome-text">
-                        <h1 class="welcome-title">We grow <span class="welcome-title-green">plants</span> and give you oxygen</h1>
-                        <p class="welcome-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <button class="welcome-button">Learn more</button>
-                    </div>
+                    
                 </div>
             </div>
         </section>
 
         <section class="about">
-            <div class="wrapper">
-                <div class="about-wrapper">
-                    <div class="about-text">
-                        <h2 class="about-title">We are <span class="about-title-orange">professional experienced</span> gardeners </h2>
-                        <p class="about-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                    </div>
-                    <div class="about-img">
-                        <img src="./assets/img/houseplant 1.png" alt="Houseplant">
-                    </div>
+            <div class="wrapper about__wrapper">
+                <div class="about__content">
+                    <h2  class="about__title">We are <span class="title__colored">professional experienced</span> gardeners </h2>
+                    <p class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
-                
+                <div class="about__img">
+                    <img src="./assets/img/about-img.png" alt="Houseplant">
+                </div>
             </div>
         </section>
+
+
+
+
+
         <section class="service">
             <div class="wrapper">
-                <div class="service-header">
-                    <div class="service-title">
-                        <h2 class="service-title-text">Service and our projects</h2>
-                    </div>
-                    <div class="service-buttons">
-                        <button class="servise-button">Gardens</button>
-                        <button class="servise-button">Lawn</button>
-                        <button class="servise-button">Planting</button>
+                <div class="service__header">
+                    <h2 class="service__title">Service and our projects</h2>
+                    <div class="service__buttons">
+                        <button class="button button_service">Gardens</button>
+                        <button class="button button_service">Lawn</button>
+                        <button class="button button_service">Planting</button>
                     </div>
                 </div>
-                <div class="service-cards">
-                    <div class="service-card">
-                        <div class="service-img-wrapper">
-                            <img src="./assets/img/service1.png" alt="Service 1" class="service-card-img">
-                        </div>
-                        <div class="service-card-text-area">
-                            <p class="service-card-title">Garden care</p>
-                            <p class="service-card-subtitle">Lorem Ipsum has been the industry</p>
+                <div class="service__cards">
+                    <div class="service__card">
+                        <img class="card__img" src="./assets/img/service/1.jpg" alt="Service 1">
+                        <div class="card__content">
+                            <h3>Garden care</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img-wrapper">
-                            <img src="./assets/img/service2.png" alt="Service 2" class="service-card-img">
-                        </div>
-                        <div class="service-card-text-area">
-                            <p class="service-card-title">Planting</p>
-                            <p class="service-card-subtitle">Lorem Ipsum has been the industry</p>
+                    <div class="service__card">
+                        <img class="card__img" src="./assets/img/service/2.jpg" alt="Service 1">
+                        <div class="card__content">
+                            <h3>Planting</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img-wrapper">
-                            <img src="./assets/img/service3.png" alt="Service 3" class="service-card-img">
-                        </div>
-                        <div class="service-card-text-area">
-                            <p class="service-card-title">Lawn care</p>
-                            <p class="service-card-subtitle">Lorem Ipsum has been the industry</p>
+                    <div class="service__card">
+                        <img class="card__img" src="./assets/img/service/3.jpg" alt="Service 1">
+                        <div class="card__content">
+                            <h3>Lawn care</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img-wrapper">
-                            <img src="./assets/img/service4.png" alt="Service 4" class="service-card-img">
-                        </div>
-                        <div class="service-card-text-area">
-                            <p class="service-card-title">Planting</p>
-                            <p class="service-card-subtitle">Lorem Ipsum has been the industry</p>
+                    <div class="service__card">
+                        <img class="card__img" src="./assets/img/service/4.jpg" alt="Service 1">
+                        <div class="card__content">
+                            <h3>Planting</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img-wrapper">
-                            <img src="./assets/img/service5.png" alt="Service 5" class="service-card-img">
-                        </div>
-                        <div class="service-card-text-area">
-                            <p class="service-card-title">Garden care</p>
-                            <p class="service-card-subtitle">Lorem Ipsum has been the industry</p>
+                    <div class="service__card">
+                        <img class="card__img" src="./assets/img/service/5.jpg" alt="Service 1">
+                        <div class="card__content">
+                            <h3>Garden care</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img-wrapper">
-                            <img src="./assets/img/service6.png" alt="Service 6" class="service-card-img">
-                        </div>
-                        <div class="service-card-text-area">
-                            <p class="service-card-title">Planting</p>
-                            <p class="service-card-subtitle">Lorem Ipsum has been the industry</p>
+                    <div class="service__card">
+                        <img class="card__img" src="./assets/img/service/6.jpg" alt="Service 1">
+                        <div class="card__content">
+                            <h3>Planting</h3>
+                            <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                 </div>
