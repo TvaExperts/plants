@@ -1,12 +1,12 @@
-.navigation__link:hover, .button_welcome {
+.navigation__link:hover, .button {
   transition: all 0.3s ease-out;
 }
 
-.navigation__link, .button_service, h2 {
+.navigation__link, .button, h2 {
   font-family: "Inika", Verdana, sans-serif;
 }
 
-.button_welcome, body {
+.prices__title, .button_welcome, body {
   font-family: "Inter", Verdana, sans-serif;
 }
 
@@ -48,13 +48,24 @@ h3 {
 }
 
 .button {
+  width: 161px;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #E06733;
   border: 1px solid #E06733;
   border-radius: 5px;
   padding: 12px 0px;
+  background: none;
 }
 
 .button_welcome {
   padding: 14px 27px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: normal;
   text-transform: uppercase;
   border: 2px solid #E06733;
 }
@@ -64,13 +75,8 @@ h3 {
   color: white;
 }
 
-.button_service {
-  width: 161px;
-  font-size: 2rem;
-  line-height: 2.6rem;
-  font-style: normal;
-  font-weight: normal;
-  color: #E06733;
+.button_bold {
+  font-weight: bold;
 }
 
 .wrapper {
@@ -88,6 +94,62 @@ h3 {
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.footer {
+  padding: 40px 0px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #000000;
+  font-size: 2rem;
+  line-height: 5rem;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.copyright__text {
+  padding-right: 20px;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer__social-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__icon {
+  cursor: pointer;
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-left: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon_instagram {
+  background-image: url("../assets/img/footer/instagram.svg");
+}
+
+.icon_fb {
+  background-image: url("../assets/img/footer/fb.svg");
+}
+
+.icon_twitter {
+  background-image: url("../assets/img/footer/twitter.svg");
+}
+
+.icon_pinterest {
+  background-image: url("../assets/img/footer/pinterest.svg");
 }
 
 .welcome {
@@ -206,6 +268,69 @@ h3 {
   padding-top: 10px;
 }
 
+.prices__wrapper {
+  padding: 40px 0 115px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.prices__title {
+  padding-bottom: 60px;
+  color: #000000;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.prices__dropdowns {
+  max-width: 332px;
+  padding: 2px 0;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+}
+
+.dropdown {
+  width: 250px;
+  padding: 16px 0;
+  margin: 32px 41px;
+  background: #EDF2EC;
+  border-radius: 20px;
+}
+
+.dropdown__title {
+  padding-left: 40px;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  color: #000000;
+}
+
+.prices__right-column {
+  text-align: end;
+}
+
+.prices__subtitle {
+  max-width: 452px;
+  padding-bottom: 38px;
+  font-size: 4rem;
+  line-height: 5rem;
+  font-style: normal;
+  font-weight: bold;
+  color: #000000;
+}
+
+.subtitle__colored {
+  color: #499A18;
+}
+
+.prices__img {
+  padding-top: 39px;
+  display: inline-block;
+}
+
 .navigation {
   display: flex;
 }
@@ -223,4 +348,52 @@ h3 {
 .navigation__link:hover {
   color: #E06733;
   font-weight: 700;
+}
+
+.contact-us {
+  background: #EDF2EC;
+  padding-top: 53px;
+}
+
+.contact-us__wrapper {
+  height: 497px;
+  background-image: url("./../assets/img/contact_img.png");
+  background-repeat: no-repeat;
+}
+
+.contact-us__title {
+  text-align: center;
+  padding: 7px 0 37px 0;
+}
+
+.contact-us__cities {
+  max-width: 450px;
+  height: 50px;
+  margin-left: auto;
+  padding-bottom: 352px;
+  background: #D6E7D2;
+}
+
+.contact-us {
+  background: #EDF2EC;
+  padding-top: 53px;
+}
+
+.contact-us__wrapper {
+  height: 497px;
+  background-image: url("./../assets/img/contact_img.png");
+  background-repeat: no-repeat;
+}
+
+.contact-us__title {
+  text-align: center;
+  padding: 7px 0 37px 0;
+}
+
+.contact-us__cities {
+  max-width: 450px;
+  height: 50px;
+  margin-left: auto;
+  padding-bottom: 352px;
+  background: #D6E7D2;
 }/*# sourceMappingURL=style.css.map */

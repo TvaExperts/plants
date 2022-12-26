@@ -1,0 +1,24 @@
+.contact-us {
+    background: $color_background;
+    padding-top: 53px;
+}
+
+.contact-us__wrapper {
+    height: 497px;
+    background-image: url("./../assets/img/contact_img.png");
+    background-repeat: no-repeat;
+}
+
+.contact-us__title {
+    text-align: center;
+    padding: 7px 0 37px 0;
+}
+
+.contact-us__cities {
+    max-width: 450px;
+    height: 50px;
+    margin-left: auto;
+    padding-bottom: 352px;
+    background: $color_dropdown_bg;
+
+}
