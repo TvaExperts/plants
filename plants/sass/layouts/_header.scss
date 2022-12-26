@@ -5,10 +5,20 @@
 }
 
 .header__wrapper {
+    padding-top: 1px;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: baseline;
     justify-content: space-between;
+}
+
+
+.logo__link {
+
+    color: $color_black;
+    @include font(1.6rem, 2.1rem);
+    @extend %font-additional;
+    text-decoration: none;
 }
 
 

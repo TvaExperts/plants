@@ -9,6 +9,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    @include font(1.6rem, 2.4rem);
     @extend  %font-primary;
 }
 

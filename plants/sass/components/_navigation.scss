@@ -1,15 +1,18 @@
 
 .navigation {
     display: flex;
-
+    justify-content: space-between;
+    
 }
 
 .navigation__item {
     list-style: none;
-    padding-left: 46px;
+    
+    
 }
 
 .navigation__link {
+    @include font(1.6rem,5rem);
     text-decoration: none;
     @extend %font-additional;
     color: $color_nav;
@@ -20,4 +23,10 @@
     color: $color_additional;
     font-weight: 700;
     @extend %transition;
+}
+
+.item__wrapper {
+    
+    padding-left: 47px;
+    text-align: center;
 }

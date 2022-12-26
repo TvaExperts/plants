@@ -8,28 +8,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 49px;
 }
 
 .welcome__img {
-    padding-top: 62px;
+    padding-top: 53px;
 }
 
 .welcome__content {
     max-width: 549px;
-    padding-top: 98px;
+    padding-top: 97px;
 }
 
-.title__colored {
+.h1__colored {
     color: $color_primary;
 }
 
 .welcome__subtitle {
     max-width: 526px;
-    padding: 42px 0px 48px 0px;
+    padding: 44px 0px 47px 0px;
     @include font(2rem, 3.5rem);
     color: $color_text;
 }
 
-.welcome__button {
+.welcome__buttons {
     @include font(1.6rem, 2rem);
 }
