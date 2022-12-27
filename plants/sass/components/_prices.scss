@@ -24,7 +24,7 @@
 }
 
 .dropdown {
-    
+    width: 250px;
     padding: 16px 0 14px 0;
     margin: 32px 40px;
     background: $color_background;
@@ -35,7 +35,9 @@
     width: 16px;
     height: 16px;
 
-    background: $color_arrow_bg;
+
+
+    background: $color_arrow_bg_prices;
     background-image: url("../assets/img/prices/arrow-down.svg");
     background-position: center;
     background-repeat: no-repeat;

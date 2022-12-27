@@ -53,6 +53,7 @@ h3 {
 
 .button {
   width: 162px;
+  padding: 11px 0px;
   font-size: 2rem;
   line-height: 2.6rem;
   font-weight: 400;
@@ -60,10 +61,9 @@ h3 {
   color: #E06733;
   border: 1px solid #E06733;
   border-radius: 5px;
-  padding: 11px 0px;
   background: none;
+  cursor: pointer;
 }
-
 .button_welcome {
   width: 158px;
   padding: 10px 0;
@@ -76,15 +76,16 @@ h3 {
   border-radius: 10px;
   color: #000000;
 }
-
 .button_welcome:hover {
   background: #E06733;
   color: white;
 }
-
 .button_bold {
   font-weight: bold;
   padding-right: 3px;
+}
+.button_service {
+  width: 161px;
 }
 
 .wrapper {
@@ -270,7 +271,13 @@ h3 {
 }
 
 .service__buttons {
-  padding: 29px 0px 0px 104px;
+  padding: 29px 0px 0px 142px;
+}
+.service__buttons > .button {
+  margin-left: 33px;
+}
+.service__buttons > .button:first-child {
+  margin-left: 0;
 }
 
 .service__cards {
@@ -329,6 +336,7 @@ h3 {
 }
 
 .dropdown {
+  width: 250px;
   padding: 16px 0 14px 0;
   margin: 32px 40px;
   background: #EDF2EC;
@@ -413,13 +421,13 @@ h3 {
 
 .contact-us__wrapper {
   height: 497px;
-  background-image: url("./../assets/img/contact_img.png");
+  background-image: url("./../assets/img/contact/woman.png");
   background-repeat: no-repeat;
 }
 
 .contact-us__title {
   text-align: center;
-  padding: 7px 0 37px 0;
+  padding: 7px 5px 36px 0;
   font-weight: bold;
 }
 
@@ -427,8 +435,30 @@ h3 {
   max-width: 450px;
   height: 50px;
   margin-left: auto;
-  padding-bottom: 352px;
+  margin-bottom: 352px;
   background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.city__title {
+  padding: 5px 20px;
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #717171;
+}
+
+.city__arrow {
+  width: 16px;
+  height: 16px;
+  background: #AEA1A1;
+  background-image: url("../assets/img/contact/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .contact-us {
@@ -438,13 +468,13 @@ h3 {
 
 .contact-us__wrapper {
   height: 497px;
-  background-image: url("./../assets/img/contact_img.png");
+  background-image: url("./../assets/img/contact/woman.png");
   background-repeat: no-repeat;
 }
 
 .contact-us__title {
   text-align: center;
-  padding: 7px 0 37px 0;
+  padding: 7px 5px 36px 0;
   font-weight: bold;
 }
 
@@ -452,6 +482,28 @@ h3 {
   max-width: 450px;
   height: 50px;
   margin-left: auto;
-  padding-bottom: 352px;
+  margin-bottom: 352px;
   background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.city__title {
+  padding: 5px 20px;
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #717171;
+}
+
+.city__arrow {
+  width: 16px;
+  height: 16px;
+  background: #AEA1A1;
+  background-image: url("../assets/img/contact/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

@@ -18,7 +18,15 @@
 }
 
 .service__buttons {
-    padding: 29px 0px 0px 104px;
+    padding: 29px 0px 0px 142px;
+
+    >.button {
+        margin-left: 33px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
 }
 
 .service__cards {
