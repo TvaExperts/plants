@@ -24,12 +24,28 @@
 }
 
 .dropdown {
-    width: 250px;
-    padding: 15px 0;
+    
+    padding: 16px 0 14px 0;
     margin: 32px 40px;
     background: $color_background;
     border-radius: 20px;
 }
+
+.dropdown__arrow {
+    width: 16px;
+    height: 16px;
+
+    background: $color_arrow_bg;
+    background-image: url("../assets/img/prices/arrow-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    display: inline-block;
+    
+
+}
+
+
 
 .dropdown__title {
     padding-left: 40px;
@@ -46,7 +62,6 @@
     padding-bottom: 40px;
     @include font(4rem, 5rem, bold);
     color: $color_black;
-    
 }
 
 .subtitle__colored {

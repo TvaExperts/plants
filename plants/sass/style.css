@@ -84,6 +84,7 @@ h3 {
 
 .button_bold {
   font-weight: bold;
+  padding-right: 3px;
 }
 
 .wrapper {
@@ -137,10 +138,23 @@ h3 {
   color: #000000;
 }
 
+.footer__school {
+  padding-left: 29px;
+}
+
 .footer__social-links {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+}
+
+.social__item {
+  list-style: none;
+}
+
+.footer__school {
+  padding-left: 29px;
 }
 
 .social__icon {
@@ -167,10 +181,6 @@ h3 {
 
 .icon_pinterest {
   background-image: url("../assets/img/footer/pinterest.svg");
-}
-
-.footer__school {
-  padding-left: 5px;
 }
 
 .welcome {
@@ -319,11 +329,21 @@ h3 {
 }
 
 .dropdown {
-  width: 250px;
-  padding: 15px 0;
+  padding: 16px 0 14px 0;
   margin: 32px 40px;
   background: #EDF2EC;
   border-radius: 20px;
+}
+
+.dropdown__arrow {
+  width: 16px;
+  height: 16px;
+  background: #D9D9D9;
+  background-image: url("../assets/img/prices/arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .dropdown__title {
@@ -400,6 +420,7 @@ h3 {
 .contact-us__title {
   text-align: center;
   padding: 7px 0 37px 0;
+  font-weight: bold;
 }
 
 .contact-us__cities {
@@ -424,6 +445,7 @@ h3 {
 .contact-us__title {
   text-align: center;
   padding: 7px 0 37px 0;
+  font-weight: bold;
 }
 
 .contact-us__cities {
