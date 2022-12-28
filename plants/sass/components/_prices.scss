@@ -1,5 +1,6 @@
 .prices__wrapper {
-    padding: 39px 0 102px 0;
+    padding-top: 39px;
+    padding-bottom: 102px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -11,7 +12,10 @@
     color: $color_black;
     @extend %font-primary;
     @include font(4rem, 4.8rem, bold);
-    
+    @include media-tablet {
+        padding-bottom: 50px;
+        @include font(3.5rem, 4.2rem, bold);
+    }
     
 }
 
@@ -34,17 +38,12 @@
 .dropdown__arrow {
     width: 16px;
     height: 16px;
-
-
-
     background: $color_arrow_bg_prices;
     background-image: url("../assets/img/prices/arrow-down.svg");
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px;
     display: inline-block;
-    
-
 }
 
 
@@ -57,6 +56,9 @@
 
 .prices__right-column {
     text-align: end;
+    @include media-tablet {
+        padding-top: 90px;
+    }
 }
 
 .prices__subtitle {
@@ -64,6 +66,11 @@
     padding-bottom: 40px;
     @include font(4rem, 5rem, bold);
     color: $color_black;
+    @include media-tablet {
+        max-width: 296px;
+        padding-bottom: 22px;
+        @include font(2.5rem, 3.5rem, bold);
+    }
 }
 
 .subtitle__colored {

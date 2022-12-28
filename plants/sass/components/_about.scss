@@ -1,18 +1,40 @@
 .about__wrapper {
-    padding: 93px 0px 88px 0;
+    padding-top: 93px;
+    padding-bottom: 88px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include media-tablet  {
+        padding-top: 40px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 89px;
+    }
+    
 }
 
 .about__content {
     padding-top: 68px;
-
+    @include media-tablet  {
+        padding-top: 0px;
+        padding-bottom: 68px;
+        
+ 
+    }
 }
 
 .about__title {
     max-width: 463px;
     padding-bottom: 38px;
+    @include media-tablet  {
+       
+        max-width: 423px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        text-align: center;
+        
+    }
 }
 
 .title__colored {
@@ -23,5 +45,15 @@
     max-width: 605px;
     @include font(2rem, 3rem);
     color: $color_text;
+    @include media-tablet  {
+        max-width: 100%;
+    }
+ 
+}
 
+.img-plant {
+    @include media-tablet  {
+        width: 250px;
+        height: 258px;
+    }
 }

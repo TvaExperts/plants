@@ -9,15 +9,35 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 49px;
+    @include media-tablet  {
+        flex-direction: row-reverse;
+        padding-bottom: 70px;
+    }
 }
 
 .welcome__img {
     padding-top: 53px;
+    @include media-tablet  { 
+        padding-top: 33px;
+    }
+}
+
+.img-leafs {
+    @include media-tablet  { 
+        
+        width: 280px;
+        height: 254px;
+    }
 }
 
 .welcome__content {
     max-width: 549px;
     padding-top: 97px;
+
+    @include media-tablet {
+        padding-top: 36px;
+        max-width: 341px;
+    }
 }
 
 .h1__colored {
@@ -29,6 +49,12 @@
     padding: 44px 0px 47px 0px;
     @include font(2rem, 3.5rem);
     color: $color_text;
+
+    @include media-tablet {
+        
+        @include font(1.6rem, 2.5rem);
+        padding: 31px 0 35px 5px;
+    }
 }
 
 .welcome__buttons {
