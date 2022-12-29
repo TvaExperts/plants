@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -26,7 +27,6 @@ h2 {
     @include font(4rem, 5.2rem);
     color: $color_primary;
     @extend %font-additional;
-
     @include media-tablet {
         @include font(3.5rem, 4.6rem);
     }

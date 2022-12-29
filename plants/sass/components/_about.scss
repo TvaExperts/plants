@@ -7,11 +7,10 @@
 
     @include media-tablet  {
         padding-top: 40px;
+        padding-bottom: 89px;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 89px;
     }
-    
 }
 
 .about__content {
@@ -19,8 +18,6 @@
     @include media-tablet  {
         padding-top: 0px;
         padding-bottom: 68px;
-        
- 
     }
 }
 
@@ -28,12 +25,10 @@
     max-width: 463px;
     padding-bottom: 38px;
     @include media-tablet  {
-       
         max-width: 423px;
         margin: 0 auto;
         padding-bottom: 50px;
         text-align: center;
-        
     }
 }
 
@@ -48,7 +43,6 @@
     @include media-tablet  {
         max-width: 100%;
     }
- 
 }
 
 .img-plant {

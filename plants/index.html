@@ -5,45 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We grow plants and give you oxygen</title>
-    
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./sass/style.css">
 </head>
 <body>
     <header class="header">
         <div class="wrapper header__wrapper">
             <div class="header__logo">
-                <a href="#" class="logo__link"><img src="./assets/img/logo.svg" alt="We grow plants and give you oxygen" class="header-logo-pic">Plants</a>
+                <a href="#" class="logo__link">
+                    <img class="header-logo-pic"src="./assets/img/logo.svg" alt="We grow plants and give you oxygen">Plants</a>
             </div>
             <nav class="header__navigation">
                 <ul class="navigation">
                     <li class="navigation__item">
-                        <div class="item__wrapper">
-                            <a href="#" class="navigation__link">Home</a>
-                        </div>
+                        <a href="#" class="navigation__link">Home</a>
                     </li>
                     <li class="navigation__item">
-                            <div class="item__wrapper">
-                        <a href="#" class="navigation__link">About us</a>
-                    </div>
+                        <a href="#about" class="navigation__link">About us</a>
                     </li>
                     <li class="navigation__item">
-                            <div class="item__wrapper">
-                        <a href="#" class="navigation__link">Service</a>
-                    </div>
+                        <a href="#service" class="navigation__link">Service</a>
                     </li>
                     <li class="navigation__item">
-                            <div class="item__wrapper">
-                        <a href="#" class="navigation__link">Price</a>
-                    </div>
+                        <a href="#prices" class="navigation__link">Price</a>
                     </li>
                     <li class="navigation__item">
-                        <div class="item__wrapper">
-                            <a href="#" class="navigation__link">Contacts</a>
-                        </div>
+                        <a href="#contact" class="navigation__link">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -65,7 +55,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper about__wrapper">
                 <div class="about__content">
                     <h2 class="about__title">We are <span class="title__colored">professional experienced</span> gardeners </h2>
@@ -76,14 +66,14 @@
                 </div>
             </div>
         </section>
-        <section class="service">
+        <section class="service" id="service">
             <div class="wrapper">
                 <div class="service__header">
                     <h2 class="service__title">Service and our projects</h2>
                     <div class="service__buttons">
                         <button class="button button_service">Gardens</button>
-                        <button class="button">Lawn</button>
-                        <button class="button">Planting</button>
+                        <button class="button button_service">Lawn</button>
+                        <button class="button button_service">Planting</button>
                     </div>
                 </div>
                 <div class="service__cards">
@@ -138,20 +128,19 @@
                 </div>
             </div>
         </section>
-        <section class="prices">
+        <section class="prices" id="prices">
             <div class="wrapper prices__wrapper">
                 <div class="prices__left-column">
                     <h2 class="prices__title">Prices</h2>
                     <div class="prices__dropdowns">
                         <div class="dropdown">
-                            <p class="dropdown__title">Basics <span class="dropdown__arrow"></span></p>
-                        </div>
-                        
-                        <div class="dropdown">
-                            <p class="dropdown__title">Standard <span class="dropdown__arrow"></span></p>
+                            <p class="dropdown__title">Basics</p><span class="dropdown__arrow"></span>
                         </div>
                         <div class="dropdown">
-                            <p class="dropdown__title">Pro care <span class="dropdown__arrow"></span> </p>
+                            <p class="dropdown__title">Standard</p><span class="dropdown__arrow"></span>
+                        </div>
+                        <div class="dropdown">
+                            <p class="dropdown__title">Pro care </p><span class="dropdown__arrow"></span>
                         </div>
                     </div>
                 </div>
@@ -166,11 +155,11 @@
                 </div>
             </div>
         </section>
-        <section class="contact-us">
+        <section class="contact-us" id="contact">
             <div class="wrapper contact-us__wrapper">
                 <h2 class="contact-us__title">Contact us</h2>
                 <div class="contact-us__cities">
-                    <p class="city__title">City <span class="city__arrow"></span></p>
+                    <p class="city__title">City </p><span class="city__arrow"></span>
                 </div>
             </div>
         </section>
@@ -180,14 +169,14 @@
             <div class="footer__copyright">
                 <span class="copyright__text">©</span>
                 <span class="copyright__text">2022</span>
-                <span class="copyright__text"><a href="" class="copyright__link">github</a></span>
+                <span class="copyright__text"><a class="footer__link" href="https://github.com/TvaExperts/"  target="_blank">github</a></span>
             </div>
             <div>
-                <div class="footer__school">Rolling Scopes School</div>    
+                <div class="footer__school"><a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a></div>    
             </div>
             <ul class="footer__social-links">
-                <li class="social__item"><a href="#" class="social__icon icon_instagram"></a></li>
-                <li class="social__item"><a href="#" class="social__icon icon_fb"></a></li>
+                <li class="social__item"><a href="https://www.instagram.com/rsschool_news/" class="social__icon icon_instagram" target="_blank"></a></li>
+                <li class="social__item"><a href="https://www.facebook.com/RollingScopesSchool/" class="social__icon icon_fb" target="_blank"></a></li>
                 <li class="social__item"><a href="#" class="social__icon icon_twitter"></a></li>
                 <li class="social__item"><a href="#" class="social__icon icon_pinterest"></a></li>
             </ul>

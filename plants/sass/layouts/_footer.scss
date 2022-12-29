@@ -8,14 +8,12 @@
     justify-content: space-between;
     color: $color_black;
     @include font(2rem, 5rem);
+
     @include media-tablet {
         flex-direction: column;
         align-items: center;
     }
 }
-
-
-
 
 .copyright__text {
     padding-right: 15px;
@@ -24,39 +22,38 @@
     }
 }
 
-.copyright__link {
+.footer__link {
     text-decoration: none;
     color: $color_black;
 }
 
+.footer__school {
+    padding-left: 18px;
+}
 
 .footer__social-links {
+    padding: 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
 }
 
 .social__item {
-    list-style: none;
     margin-left: 25px;
+    list-style: none;
+    
     &:first-child {
         margin-left: 0px;
     }
 }
 
-
-
 .social__icon {
-    cursor: pointer;
-    display: block;
     width: 28px;
     height: 28px;
-    
+    display: block;
     background-repeat: no-repeat;
     background-position: center;
-
-
+    cursor: pointer;
 }
 
 .icon_instagram {

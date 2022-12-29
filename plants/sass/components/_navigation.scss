@@ -1,32 +1,28 @@
 
 .navigation {
-    display: flex;
+    width: 492px;
+    padding-right: 1px;
+    display: inline-flex;
+    align-items: baseline;
     justify-content: space-between;
-    
+   
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .navigation__item {
     list-style: none;
-    
-    
 }
 
 .navigation__link {
-    @include font(1.6rem,5rem);
+    @include font(1.6rem, 5rem);
     text-decoration: none;
     @extend %font-additional;
     color: $color_nav;
-}
-
-.navigation__link:hover {
-    
-    color: $color_additional;
-    font-weight: 700;
     @extend %transition;
-}
-
-.item__wrapper {
-    
-    padding-left: 47px;
-    text-align: center;
+    &:hover {
+        color: $color_additional;
+        font-weight: 700;
+    }
 }

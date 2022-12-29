@@ -1,32 +1,28 @@
 .button {
     width: 162px;
     padding: 11px 0px;
-    
     @extend %font-additional;
     @include font(2rem, 2.6rem);
     color: $color_additional;
-    @extend %transition;
-    
+    text-align: center;
+    background: none;
     border: 1px solid $color_additional;
     border-radius: 5px;
-    background: none;
-    
+    @extend %transition;
     cursor: pointer;
-
+    &:hover {
+        background: $color_additional;
+        color: white;
+    }
     &_welcome {
         width: 158px;
         padding: 10px 0;
         @include font(1.6rem, 2rem, 400);
         @extend %font-primary;
         text-transform: uppercase;
+        color: $color_black;
         border: 2px solid $color_additional;
         border-radius: 10px;
-        color: $color_black;
-
-        &:hover {
-            background: $color_additional;
-            color: white;
-        }
     }
 
     &_bold {
@@ -36,11 +32,7 @@
 
     &_service {
         width: 161px;
-        
     }
-
-
-
 }
 
 
