@@ -4,21 +4,22 @@
 
     @include media-tablet {
         padding-top: 40px;
+        
     }
 }
 
 .contact-us__wrapper {
-    height: 497px;
+    padding-bottom: 352px;
+    text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
-    text-align: right;
+    
 
     @include media-tablet {
-        height: 739px;
+        padding-bottom: 145px;
         text-align: center;
-        background-size: 30%;
-        background-position: center;
-        background-position: bottom;
+        background-size: 26%;
+        background-position: 51.7% 100%;
     }
 }
 
@@ -28,14 +29,16 @@
     font-weight: bold;
 
     @include media-tablet {
-        padding-bottom: 100px;
+        padding: 0;
+        padding-bottom: 99px;
+        @include font(4rem,5.2rem,700);
     }
 }
 
 .contact-us__cities {
     width: 450px;
     height: 50px;
-    margin-bottom: 352px;
+    text-align: right;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +47,11 @@
 
     @include media-tablet {
         margin: 0 auto;
-        margin-bottom: 0px;
+        margin-bottom: 353px;
+    }
+
+    @include media-mobile  { 
+        width: 100%;
     }
 }
 

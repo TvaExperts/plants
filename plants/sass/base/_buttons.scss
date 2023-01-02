@@ -17,12 +17,18 @@
     &_welcome {
         width: 158px;
         padding: 10px 0;
-        @include font(1.6rem, 2rem, 400);
+        @include font(1.6rem, 2rem);
         @extend %font-primary;
         text-transform: uppercase;
         color: $color_black;
         border: 2px solid $color_additional;
         border-radius: 10px;
+
+        @include media-mobile  { 
+            width: 100px;
+            padding: 5px 0;
+            @include font(1rem, 2rem);
+        }
     }
 
     &_bold {

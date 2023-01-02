@@ -5,6 +5,10 @@
     @include media-laptop{
         padding: 36px 0 35px;
     }
+
+    @include media-mobile{
+        padding: 34px 0 35px;
+    }
 }
 
 .header__wrapper {

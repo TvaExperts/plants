@@ -14,6 +14,11 @@
         flex-direction: row-reverse;
         padding-bottom: 70px;
     }
+
+    @include media-mobile  { 
+        padding-top: 25px;
+        padding-bottom: 24px;
+    }
 }
 
 .img-leafs {
@@ -21,14 +26,25 @@
         width: 280px;
         height: 254px;
     }
+
+    @include media-mobile  { 
+        display: none;
+    }
 }
 
 .welcome__content {
     max-width: 549px;
     padding-top: 44px;
+    
     @include media-tablet {
         padding-top: 3px;
         max-width: 341px;
+    }
+
+    @include media-mobile  { 
+        max-width: 100%;
+        padding-top: 0;
+        
     }
 }
 
@@ -46,8 +62,14 @@
         padding: 31px 0 35px 5px;
         @include font(1.6rem, 2.5rem);
     }
+
+    @include media-mobile  { 
+        padding: 20px 0 26px;
+        max-width: 100%;
+    }
 }
 
-.welcome__buttons {
-    @include font(1.6rem, 2rem);
-}
+
+
+    
+

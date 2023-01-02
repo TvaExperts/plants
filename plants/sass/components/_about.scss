@@ -11,6 +11,13 @@
         flex-direction: column;
         align-items: center;
     }
+
+    @include media-mobile  {
+        padding-top: 30px;
+        padding-bottom: 21px;
+    }
+
+
 }
 
 .about__content {
@@ -18,6 +25,10 @@
     @include media-tablet  {
         padding-top: 0px;
         padding-bottom: 68px;
+    }
+
+    @include media-mobile  {
+        padding: 0;
     }
 }
 
@@ -29,6 +40,11 @@
         margin: 0 auto;
         padding-bottom: 50px;
         text-align: center;
+    }
+
+    @include media-mobile  { 
+        max-width: 100%;
+        padding-bottom: 13px;
     }
 }
 
@@ -43,11 +59,28 @@
     @include media-tablet  {
         max-width: 100%;
     }
+
+    @include media-mobile  {
+        @include font(1.5rem, 2.5rem);
+    }
 }
 
 .img-plant {
     @include media-tablet  {
         width: 250px;
         height: 258px;
+    }
+
+    @include media-mobile  {
+        width: 45.5%;
+        height: 45.5%;
+       
+    }
+}
+
+.about__img {
+    @include media-mobile  {
+        text-align: center;
+
     }
 }

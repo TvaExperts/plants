@@ -43,6 +43,14 @@ h1 {
     font-style: normal;
   }
 }
+@media (max-width: 380px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
 
 h2 {
   font-size: 4rem;
@@ -55,6 +63,14 @@ h2 {
   h2 {
     font-size: 3.5rem;
     line-height: 4.6rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+@media (max-width: 380px) {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.3rem;
     font-weight: 400;
     font-style: normal;
   }
@@ -98,6 +114,16 @@ h3 {
   border: 2px solid #E06733;
   border-radius: 10px;
 }
+@media (max-width: 380px) {
+  .button_welcome {
+    width: 100px;
+    padding: 5px 0;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 .button_bold {
   font-weight: bold;
   padding-right: 3px;
@@ -115,6 +141,11 @@ h3 {
     padding: 0 50px;
   }
 }
+@media (max-width: 380px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
 
 .header {
   padding: 43px 0px 42px;
@@ -123,6 +154,11 @@ h3 {
 @media (max-width: 1222px) {
   .header {
     padding: 36px 0 35px;
+  }
+}
+@media (max-width: 380px) {
+  .header {
+    padding: 34px 0 35px;
   }
 }
 
@@ -150,6 +186,11 @@ h3 {
 .footer {
   padding: 40px 0px;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0px;
+  }
+}
 
 .footer__wrapper {
   display: flex;
@@ -165,6 +206,11 @@ h3 {
   .footer__wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 17px;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    font-style: normal;
   }
 }
 
@@ -183,9 +229,15 @@ h3 {
 .footer__school {
   padding-left: 18px;
 }
+@media (max-width: 768px) {
+  .footer__school {
+    padding: 0;
+  }
+}
 
 .footer__social-links {
   padding: 0;
+  padding-top: 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +256,7 @@ h3 {
   height: 28px;
   display: block;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
   cursor: pointer;
 }
 
@@ -242,11 +294,22 @@ h3 {
     padding-bottom: 70px;
   }
 }
+@media (max-width: 380px) {
+  .welcome__wrapper {
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
+}
 
 @media (max-width: 768px) {
   .img-leafs {
     width: 280px;
     height: 254px;
+  }
+}
+@media (max-width: 380px) {
+  .img-leafs {
+    display: none;
   }
 }
 
@@ -258,6 +321,12 @@ h3 {
   .welcome__content {
     padding-top: 3px;
     max-width: 341px;
+  }
+}
+@media (max-width: 380px) {
+  .welcome__content {
+    max-width: 100%;
+    padding-top: 0;
   }
 }
 
@@ -283,12 +352,11 @@ h3 {
     font-style: normal;
   }
 }
-
-.welcome__buttons {
-  font-size: 1.6rem;
-  line-height: 2rem;
-  font-weight: 400;
-  font-style: normal;
+@media (max-width: 380px) {
+  .welcome__subtitle {
+    padding: 20px 0 26px;
+    max-width: 100%;
+  }
 }
 
 .about__wrapper {
@@ -306,6 +374,12 @@ h3 {
     align-items: center;
   }
 }
+@media (max-width: 380px) {
+  .about__wrapper {
+    padding-top: 30px;
+    padding-bottom: 21px;
+  }
+}
 
 .about__content {
   padding-top: 68px;
@@ -314,6 +388,11 @@ h3 {
   .about__content {
     padding-top: 0px;
     padding-bottom: 68px;
+  }
+}
+@media (max-width: 380px) {
+  .about__content {
+    padding: 0;
   }
 }
 
@@ -327,6 +406,12 @@ h3 {
     margin: 0 auto;
     padding-bottom: 50px;
     text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .about__title {
+    max-width: 100%;
+    padding-bottom: 13px;
   }
 }
 
@@ -347,11 +432,31 @@ h3 {
     max-width: 100%;
   }
 }
+@media (max-width: 380px) {
+  .about__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 
 @media (max-width: 768px) {
   .img-plant {
     width: 250px;
     height: 258px;
+  }
+}
+@media (max-width: 380px) {
+  .img-plant {
+    width: 45.5%;
+    height: 45.5%;
+  }
+}
+
+@media (max-width: 380px) {
+  .about__img {
+    text-align: center;
   }
 }
 
@@ -401,7 +506,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .service__cards {
-    padding-bottom: 70px;
+    padding-bottom: 32px;
   }
 }
 
@@ -410,7 +515,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .service__card {
-    padding-bottom: 40px;
+    padding-bottom: 37px;
   }
 }
 
@@ -442,7 +547,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .card__content {
-    padding: 9px 0 20px 0;
+    padding: 8px 0 20px 0;
   }
 }
 
@@ -457,7 +562,7 @@ h3 {
 @media (max-width: 768px) {
   .card__text {
     max-width: 201px;
-    padding-top: 10px;
+    padding-top: 11px;
     margin: 0 auto;
   }
 }
@@ -468,6 +573,11 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .prices__wrapper {
+    padding-bottom: 75px;
+  }
 }
 
 .prices__title {
@@ -480,7 +590,8 @@ h3 {
 }
 @media (max-width: 768px) {
   .prices__title {
-    padding-bottom: 50px;
+    padding-bottom: 58px;
+    padding-left: 15px;
     font-size: 3.5rem;
     line-height: 4.2rem;
     font-weight: bold;
@@ -494,6 +605,11 @@ h3 {
   border: 1px solid #E3E1D5;
   border-radius: 20px;
 }
+@media (max-width: 380px) {
+  .prices__dropdowns {
+    max-width: 100%;
+  }
+}
 
 .dropdown {
   width: 250px;
@@ -504,6 +620,11 @@ h3 {
   align-items: center;
   background: #EDF2EC;
   border-radius: 20px;
+}
+@media (max-width: 380px) {
+  .dropdown {
+    width: 150px;
+  }
 }
 
 .dropdown__arrow {
@@ -532,7 +653,12 @@ h3 {
 }
 @media (max-width: 768px) {
   .prices__right-column {
-    padding-top: 90px;
+    padding-top: 101px;
+  }
+}
+@media (max-width: 380px) {
+  .prices__right-column {
+    display: none;
   }
 }
 
@@ -548,7 +674,7 @@ h3 {
 @media (max-width: 768px) {
   .prices__subtitle {
     max-width: 296px;
-    padding-bottom: 22px;
+    padding-bottom: 28px;
     font-size: 2.5rem;
     line-height: 3.5rem;
     font-weight: bold;
@@ -563,6 +689,11 @@ h3 {
 .prices__img {
   padding-top: 39px;
   display: inline-block;
+}
+@media (max-width: 768px) {
+  .prices__img {
+    padding-top: 34px;
+  }
 }
 
 .navigation {
@@ -606,18 +737,17 @@ h3 {
 }
 
 .contact-us__wrapper {
-  height: 497px;
+  padding-bottom: 352px;
+  text-align: right;
   background-image: url("./../assets/img/contact/woman.png");
   background-repeat: no-repeat;
-  text-align: right;
 }
 @media (max-width: 768px) {
   .contact-us__wrapper {
-    height: 739px;
+    padding-bottom: 145px;
     text-align: center;
-    background-size: 30%;
-    background-position: center;
-    background-position: bottom;
+    background-size: 26%;
+    background-position: 51.7% 100%;
   }
 }
 
@@ -628,14 +758,19 @@ h3 {
 }
 @media (max-width: 768px) {
   .contact-us__title {
-    padding-bottom: 100px;
+    padding: 0;
+    padding-bottom: 99px;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+    font-style: normal;
   }
 }
 
 .contact-us__cities {
   width: 450px;
   height: 50px;
-  margin-bottom: 352px;
+  text-align: right;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -645,7 +780,12 @@ h3 {
 @media (max-width: 768px) {
   .contact-us__cities {
     margin: 0 auto;
-    margin-bottom: 0px;
+    margin-bottom: 353px;
+  }
+}
+@media (max-width: 380px) {
+  .contact-us__cities {
+    width: 100%;
   }
 }
 
@@ -682,18 +822,17 @@ h3 {
 }
 
 .contact-us__wrapper {
-  height: 497px;
+  padding-bottom: 352px;
+  text-align: right;
   background-image: url("./../assets/img/contact/woman.png");
   background-repeat: no-repeat;
-  text-align: right;
 }
 @media (max-width: 768px) {
   .contact-us__wrapper {
-    height: 739px;
+    padding-bottom: 145px;
     text-align: center;
-    background-size: 30%;
-    background-position: center;
-    background-position: bottom;
+    background-size: 26%;
+    background-position: 51.7% 100%;
   }
 }
 
@@ -704,14 +843,19 @@ h3 {
 }
 @media (max-width: 768px) {
   .contact-us__title {
-    padding-bottom: 100px;
+    padding: 0;
+    padding-bottom: 99px;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+    font-style: normal;
   }
 }
 
 .contact-us__cities {
   width: 450px;
   height: 50px;
-  margin-bottom: 352px;
+  text-align: right;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -721,7 +865,12 @@ h3 {
 @media (max-width: 768px) {
   .contact-us__cities {
     margin: 0 auto;
-    margin-bottom: 0px;
+    margin-bottom: 353px;
+  }
+}
+@media (max-width: 380px) {
+  .contact-us__cities {
+    width: 100%;
   }
 }
 
