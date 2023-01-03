@@ -4,7 +4,10 @@
 
     @include media-tablet {
         padding-top: 40px;
-        
+    }
+
+    @include media-mobile {
+        padding-top: 25px;
     }
 }
 
@@ -21,6 +24,13 @@
         background-size: 26%;
         background-position: 51.7% 100%;
     }
+
+    @include media-mobile {
+        padding-bottom: 14px;
+        text-align: center;
+        background-size: 26.2%;
+        background-position: 49.2% 100%;
+    }
 }
 
 .contact-us__title {
@@ -31,8 +41,15 @@
     @include media-tablet {
         padding: 0;
         padding-bottom: 99px;
-        @include font(4rem,5.2rem,700);
+        @include font(4rem, 5.2rem, 700);
     }
+
+    @include media-mobile {
+
+        padding-bottom: 80px;
+        @include font(2.5rem, 3.3rem, 700);
+    }
+    
 }
 
 .contact-us__cities {
@@ -51,7 +68,8 @@
     }
 
     @include media-mobile  { 
-        width: 100%;
+        width: 300px;
+        margin-bottom: 243px;
     }
 }
 
@@ -72,4 +90,8 @@
     background-repeat: no-repeat;
     border-radius: 8px;
     cursor: pointer;
+
+    @include media-mobile {
+        margin-right: 20px;
+    }
 }
