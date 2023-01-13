@@ -16,10 +16,16 @@
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
+    @include media-mobile{
+        align-items: flex-start;
+    }
 }
 
 .header__logo {
     padding-left: 1px;
+    @include media-mobile{
+        padding: 0;
+    }
 }
 
 .logo__link {
@@ -28,4 +34,55 @@
     @include font(1.6rem, 2.1rem);
     @extend %font-additional;
     text-decoration: none;
+
+
 }
+
+.header__burger {
+    display: none;
+    @extend %transition;
+    z-index: 2;
+    @include media-mobile{ 
+        content: '';
+        width: 40px;
+        height: 26px;
+        display: block;
+        position: relative;
+        background-image: url("./../assets/img/burger.svg");
+        background-repeat: no-repeat;
+        background-position: 0 center;    
+        
+        .header.open &{
+            background-image: none;
+
+        }
+    }
+}
+
+.header__burger:before, 
+.header__burger:after {
+    content: '';
+    background-color: $color_title;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    @extend %transition;
+}
+
+.header__burger:before{
+    top: 0;
+
+    .header.open &{
+        top: 45%;
+        transform: rotate(45deg);
+    }
+} 
+.header__burger:after {
+    bottom: 0;
+
+    .header.open &{
+        bottom: 45%;
+        transform: rotate(-45deg);
+    }
+}
+

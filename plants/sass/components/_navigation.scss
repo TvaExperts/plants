@@ -5,11 +5,20 @@
     display: inline-flex;
     align-items: baseline;
     justify-content: space-between;
+    @extend %transition;
    
     @include media-mobile {
-        display: none;
+        padding: 26px 0 10px 25px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -100%;
+        background-color: darkkhaki;
+
+        .header.open &{
+            top:0;
+        }
     }
-    
 }
 
 .navigation__item {

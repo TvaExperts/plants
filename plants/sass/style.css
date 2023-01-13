@@ -1,4 +1,5 @@
-.navigation__link, .button {
+.navigation__link, .navigation, .header__burger:before,
+.header__burger:after, .header__burger, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -183,9 +184,19 @@ h3 {
   align-items: baseline;
   justify-content: space-between;
 }
+@media (max-width: 380px) {
+  .header__wrapper {
+    align-items: flex-start;
+  }
+}
 
 .header__logo {
   padding-left: 1px;
+}
+@media (max-width: 380px) {
+  .header__logo {
+    padding: 0;
+  }
 }
 
 .logo__link {
@@ -196,6 +207,51 @@ h3 {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+}
+
+.header__burger {
+  display: none;
+  z-index: 2;
+}
+@media (max-width: 380px) {
+  .header__burger {
+    content: "";
+    width: 40px;
+    height: 26px;
+    display: block;
+    position: relative;
+    background-image: url("./../assets/img/burger.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+  .header.open .header__burger {
+    background-image: none;
+  }
+}
+
+.header__burger:before,
+.header__burger:after {
+  content: "";
+  background-color: #717171;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+}
+
+.header__burger:before {
+  top: 0;
+}
+.header.open .header__burger:before {
+  top: 45%;
+  transform: rotate(45deg);
+}
+
+.header__burger:after {
+  bottom: 0;
+}
+.header.open .header__burger:after {
+  bottom: 45%;
+  transform: rotate(-45deg);
 }
 
 .footer {
@@ -837,7 +893,15 @@ h3 {
 }
 @media (max-width: 380px) {
   .navigation {
-    display: none;
+    padding: 26px 0 10px 25px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    background-color: darkkhaki;
+  }
+  .header.open .navigation {
+    top: 0;
   }
 }
 
@@ -933,13 +997,14 @@ h3 {
 }
 @media (max-width: 768px) {
   .contact-us__cities {
+    width: 67%;
     margin: 0 auto;
     margin-bottom: 353px;
   }
 }
 @media (max-width: 380px) {
   .contact-us__cities {
-    width: 300px;
+    width: 92%;
     margin-bottom: 243px;
   }
 }
@@ -1046,13 +1111,14 @@ h3 {
 }
 @media (max-width: 768px) {
   .contact-us__cities {
+    width: 67%;
     margin: 0 auto;
     margin-bottom: 353px;
   }
 }
 @media (max-width: 380px) {
   .contact-us__cities {
-    width: 300px;
+    width: 92%;
     margin-bottom: 243px;
   }
 }
