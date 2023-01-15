@@ -18,6 +18,6 @@
     @media (max-width: $mobile-big-width) { @content; }
 }
 
-@mixin media-mobilesmall {
-    @media (max-width: $mobile-small-width) { @content; }
+@mixin media-burger {
+    @media (max-width: $burger-width) { @content; }
 }

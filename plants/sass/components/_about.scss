@@ -1,20 +1,21 @@
 .about__wrapper {
-    padding-top: 93px;
-    padding-bottom: 88px;
+    padding-top: 92px;
+    padding-bottom: 93px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 
     @include media-tablet  {
         padding-top: 40px;
-        padding-bottom: 89px;
+        padding-bottom: 93px;
         flex-direction: column;
         align-items: center;
     }
 
     @include media-mobile  {
         padding-top: 30px;
-        padding-bottom: 21px;
+        padding-bottom: 27px;
     }
 
 
@@ -22,6 +23,7 @@
 
 .about__content {
     padding-top: 68px;
+    flex-basis: 50%;
     @include media-tablet  {
         padding-top: 0px;
         padding-bottom: 68px;
@@ -33,18 +35,19 @@
 }
 
 .about__title {
-    max-width: 463px;
+    padding-right: 38px;
     padding-bottom: 38px;
+
     @include media-tablet  {
-        max-width: 423px;
         margin: 0 auto;
-        padding-bottom: 50px;
+        padding: 0 70px 50px;
+        //padding-bottom: 50px;
         text-align: center;
     }
 
     @include media-mobile  { 
         max-width: 100%;
-        padding-bottom: 13px;
+        padding: 0 0 13px;
     }
 }
 
@@ -53,7 +56,7 @@
 }
 
 .about__text {
-    max-width: 605px;
+    //max-width: 605px;
     @include font(2rem, 3rem);
     color: $color_text;
     @include media-tablet  {
@@ -79,8 +82,23 @@
 }
 
 .about__img {
+    flex-basis: 38%;
+    height: 480px;
+    flex-shrink: 0.6;
+    background-image: url("../assets/img/about-img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include media-tablet  { 
+        flex-basis: 260px;
+        width: 250px;
+        //height: 270px;
+    }
+
     @include media-mobile  {
         text-align: center;
+        flex-basis: 155px;
+        background-position: center;
 
     }
 }

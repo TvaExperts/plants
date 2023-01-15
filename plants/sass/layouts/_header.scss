@@ -16,6 +16,11 @@
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
+
+    @include media-burger {
+        align-items: center;
+    }
+
     @include media-mobile{
         align-items: flex-start;
     }
@@ -42,7 +47,9 @@
     display: none;
     @extend %transition;
     z-index: 2;
-    @include media-mobile{ 
+
+
+    @include media-burger{ 
         content: '';
         width: 40px;
         height: 26px;
@@ -52,7 +59,7 @@
         background-repeat: no-repeat;
         background-position: 0 center;    
         
-        .header.open &{
+        .header__navigation._open &{
             background-image: none;
 
         }
@@ -72,7 +79,7 @@
 .header__burger:before{
     top: 0;
 
-    .header.open &{
+    .header__navigation._open &{
         top: 45%;
         transform: rotate(45deg);
     }
@@ -80,7 +87,7 @@
 .header__burger:after {
     bottom: 0;
 
-    .header.open &{
+    .header__navigation._open &{
         bottom: 45%;
         transform: rotate(-45deg);
     }

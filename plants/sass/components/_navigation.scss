@@ -1,21 +1,26 @@
 
 .navigation {
-    width: 492px;
+    width: 452px;
     padding-right: 1px;
+    padding-left: 0;
     display: inline-flex;
     align-items: baseline;
     justify-content: space-between;
     @extend %transition;
-   
-    @include media-mobile {
-        padding: 26px 0 10px 25px;
+ 
+
+
+    @include media-burger {
+        padding: 26px 0 26px 25px;
         display: block;
         position: absolute;
         left: 0;
         top: -100%;
-        background-color: darkkhaki;
+        background-color: $color_dropdown_bg;//$color_menu_bg;
+        width: 100%;
+        
 
-        .header.open &{
+        .header__navigation._open &{
             top:0;
         }
     }
@@ -34,5 +39,10 @@
     &:hover {
         color: $color_additional;
         font-weight: 700;
+    }
+
+    @include media-burger {
+        color: $color_title; 
+        
     }
 }
