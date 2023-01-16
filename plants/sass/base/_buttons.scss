@@ -14,15 +14,12 @@
         background: $color_additional;
         color: white;
     }
-
     @include media-mobile 
     {
         width: 121px;
         @include font(1.5rem, 2rem);
         padding: 7px 0 6px;
-        
     }
-
     &_welcome {
         width: 158px;
         padding: 10px 0;
@@ -32,25 +29,21 @@
         color: $color_black;
         border: 2px solid $color_additional;
         border-radius: 10px;
-
         @include media-mobile  { 
             width: 100px;
             padding: 5px 0;
             @include font(1rem, 2rem);
         }
     }
-
     &_bold {
         font-weight: bold;
         padding-right: 3px;
     }
-
     &_service {
         width: 161px;
         @include media-mobile  { 
             width: 121px;
         }
-
     }
 }
 

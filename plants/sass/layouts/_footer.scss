@@ -3,7 +3,6 @@
     @include media-tablet {
         padding: 32px 0px;  
     }
-
     @include media-mobile {
         padding: 22px 0px;  
     }
@@ -15,18 +14,15 @@
     justify-content: space-between;
     color: $color_black;
     @include font(2rem, 5rem);
-
     @include media-tablet {
         flex-direction: column;
         align-items: center;
         gap: 17px;
         @include font(2rem, 2.4rem);
     }
-
     @include media-mobile {
         gap: 14px;
     }
-
 }
 
 .copyright__text {
@@ -34,8 +30,6 @@
     &:last-child {
         padding-right: 0px;
     } 
-
-
 }
 
 .footer__link {
@@ -48,7 +42,6 @@
     @include media-tablet {
         padding: 0;
     }
-
     @include media-mobile {
         padding-top: 2px;
     }
@@ -68,7 +61,6 @@
 .social__item {
     margin-left: 25px;
     list-style: none;
-    
     &:first-child {
         margin-left: 0px;
     }

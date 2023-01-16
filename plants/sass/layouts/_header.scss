@@ -1,11 +1,9 @@
 .header {
     padding: 43px 0px 42px;
     background: $color_background;
-
     @include media-laptop{
         padding: 36px 0 35px;
     }
-
     @include media-mobile{
         padding: 34px 0 35px;
     }
@@ -16,11 +14,9 @@
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
-
     @include media-burger {
         align-items: center;
     }
-
     @include media-mobile{
         align-items: flex-start;
     }
@@ -39,16 +35,12 @@
     @include font(1.6rem, 2.1rem);
     @extend %font-additional;
     text-decoration: none;
-
-
 }
 
 .header__burger {
     display: none;
     @extend %transition;
     z-index: 2;
-
-
     @include media-burger{ 
         content: '';
         width: 40px;
@@ -58,7 +50,6 @@
         background-image: url("./../assets/img/burger.svg");
         background-repeat: no-repeat;
         background-position: 0 center;    
-        
         .header__navigation._open &{
             background-image: none;
 
@@ -78,7 +69,6 @@
 
 .header__burger:before{
     top: 0;
-
     .header__navigation._open &{
         top: 45%;
         transform: rotate(45deg);
@@ -86,7 +76,6 @@
 } 
 .header__burger:after {
     bottom: 0;
-
     .header__navigation._open &{
         bottom: 45%;
         transform: rotate(-45deg);

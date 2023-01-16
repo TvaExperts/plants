@@ -7,9 +7,6 @@
     align-items: baseline;
     justify-content: space-between;
     @extend %transition;
- 
-
-
     @include media-burger {
         padding: 26px 0 26px 25px;
         display: block;
@@ -18,8 +15,6 @@
         top: -100%;
         background-color: $color_dropdown_bg;//$color_menu_bg;
         width: 100%;
-        
-
         .header__navigation._open &{
             top:0;
         }
@@ -40,9 +35,7 @@
         color: $color_additional;
         font-weight: 700;
     }
-
     @include media-burger {
         color: $color_title; 
-        
     }
 }
