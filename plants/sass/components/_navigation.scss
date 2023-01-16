@@ -13,7 +13,7 @@
         position: absolute;
         left: 0;
         top: -100%;
-        background-color: $color_dropdown_bg;//$color_menu_bg;
+        background-color: $color_dropdown_bg;
         width: 100%;
         .header__navigation._open &{
             top:0;

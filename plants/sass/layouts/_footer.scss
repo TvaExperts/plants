@@ -35,6 +35,10 @@
 .footer__link {
     text-decoration: none;
     color: $color_black;
+    @extend %transition;
+    &:hover{
+        color: $color_additional;
+    }
 }
 
 .footer__school {
@@ -50,7 +54,7 @@
 .footer__social-links {
     padding: 0;
     padding-top: 10px;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: flex-start;
     @include media-mobile {
@@ -66,28 +70,20 @@
     }
 }
 
-.social__icon {
+.social__link {
     width: 28px;
     height: 28px;
     display: block;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     cursor: pointer;
 }
 
-.icon_instagram {
-    background-image: url("../assets/img/footer/instagram.svg");
+.social__link svg{
+    width: 32px;
+    height: 32px;
+    fill: #000;
+    @extend %transition;
 }
 
-.icon_fb {
-    background-image: url("../assets/img/footer/fb.svg");
+.social__link svg:hover{
+    fill: $color_additional;
 }
-
-.icon_twitter {
-    background-image: url("../assets/img/footer/twitter.svg");
-}
-
-.icon_pinterest {
-    background-image: url("../assets/img/footer/pinterest.svg");
-}
-

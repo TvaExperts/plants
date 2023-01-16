@@ -33,11 +33,14 @@
         padding-left: 15px;
         @include font(3.5rem, 4.2rem, bold);
     }
+    @include media-burger {
+        text-align: center;
+    }
     @include media-mobile {
         padding-bottom: 37px;
         padding-left: 0;
         @include font(2.5rem, 3rem, bold);
-        text-align: center;
+        
     }
 }
 

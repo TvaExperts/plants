@@ -21,9 +21,11 @@
 .service__title {
     max-width: 306px;
     margin-right: 142px;
+    @include media-burger  {
+        margin-right: 0;
+    }
     @include media-mobile  {
         max-width: 187px;
-        margin-right: 0;
     }
 }
 
@@ -40,7 +42,6 @@
     @include media-mobile  { 
         padding-top: 38px;
         gap: 9px 10px;
-
     }
 }
 
@@ -52,9 +53,11 @@
     @include media-tablet  {
         padding-bottom: 32px;
     }
+    @include media-burger  {
+        justify-content: center;
+    }
     @include media-mobile  { 
         padding-bottom: 27px;
-        justify-content: center;
     }
 }
 
