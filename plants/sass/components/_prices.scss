@@ -4,20 +4,44 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    text-align: center;
+    @include media-tablet {
+        padding-bottom: 75px;
+    }
+    @include media-burger {
+        padding-top: 25px;
+        padding-bottom: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+.prices__left-column {
+    @include media-mobile  { 
+        margin: 0 auto;
+     }
+}
 
 .prices__title {
     padding-bottom: 60px;
     color: $color_black;
     @extend %font-primary;
     @include font(4rem, 4.8rem, bold);
-
+    text-align: left;
     @include media-tablet {
-        padding-bottom: 50px;
+        padding-bottom: 58px;
+        padding-left: 15px;
         @include font(3.5rem, 4.2rem, bold);
     }
-    
+    @include media-burger {
+        text-align: center;
+    }
+    @include media-mobile {
+        padding-bottom: 37px;
+        padding-left: 0;
+        @include font(2.5rem, 3rem, bold);
+        
+    }
 }
 
 .prices__dropdowns {
@@ -25,18 +49,25 @@
     padding: 17px 0;
     border: 1px solid $color_border;
     border-radius: 20px;
+    @include media-mobile  { 
+       padding: 21px 0;
+       max-width: 224px;
+    }
 }
 
 .dropdown {
     width: 250px;
     padding: 16px 0 14px 0;
     margin: 16px 40px;
-
     display: inline-flex;
     justify-content: space-between;
     align-items:center;
     background: $color_background;
     border-radius: 20px;
+    @include media-mobile  { 
+        width: 180px;
+        margin: 7px 18px;
+    }
 }
 
 .dropdown__arrow {
@@ -55,12 +86,20 @@
     padding-left: 40px;
     @include font(2rem, 2rem, bold);
     color: $color_black;
+    @include media-mobile {
+        padding-left: 30px;
+        @include font(1.5rem, 2rem, bold);
+    }
 }
 
 .prices__right-column {
     text-align: end;
     @include media-tablet {
-        padding-top: 90px;
+        padding-top: 101px;
+    }
+    @include media-burger  { 
+        padding-top: 20px;
+        text-align: center;
     }
 }
 
@@ -69,11 +108,15 @@
     padding-bottom: 40px;
     @include font(4rem, 5rem, bold);
     color: $color_black;
-
     @include media-tablet {
         max-width: 296px;
-        padding-bottom: 22px;
+        padding-bottom: 28px;
         @include font(2.5rem, 3.5rem, bold);
+    }
+    @include media-mobile {
+        @include font(2rem, 3.5rem, bold);
+        max-width: 230px;
+        padding-bottom: 19px;
     }
 }
 
@@ -84,4 +127,10 @@
 .prices__img {
     padding-top: 39px;
     display: inline-block;
+    @include media-tablet {
+        padding-top: 34px;
+    }
+    @include media-burger {
+        display: none;
+    }
 }

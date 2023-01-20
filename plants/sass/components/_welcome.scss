@@ -8,27 +8,44 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
     @include media-tablet  {
         padding-top: 33px;
         flex-direction: row-reverse;
         padding-bottom: 70px;
     }
+    @include media-mobile  { 
+        padding-top: 25px;
+        padding-bottom: 24px;
+    }
 }
 
-.img-leafs {
+.welcome__img {
+    flex-basis: 37%;
+    height: 430px;
+    flex-shrink: 0.6;
+    background-image: url("../assets/img/welcome-leafs.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
     @include media-tablet  { 
-        width: 280px;
-        height: 254px;
+        flex-basis: 42%;
+        height: 270px;
+    }
+    @include media-burger {
+        display: none;
     }
 }
 
 .welcome__content {
-    max-width: 549px;
+    flex-basis: 44.9%;
     padding-top: 44px;
     @include media-tablet {
         padding-top: 3px;
-        max-width: 341px;
+        flex-basis: 52%;
+    }
+    @include media-burger  { 
+        flex-basis: 100%;
+        padding-top: 0;
     }
 }
 
@@ -41,13 +58,17 @@
     padding: 44px 0px 47px 0px;
     @include font(2rem, 3.5rem);
     color: $color_text;
-
     @include media-tablet {
         padding: 31px 0 35px 5px;
         @include font(1.6rem, 2.5rem);
     }
+    @include media-mobile  { 
+        padding: 20px 0 26px;
+        max-width: 100%;
+    }
 }
 
-.welcome__buttons {
-    @include font(1.6rem, 2rem);
-}
+
+
+    
+

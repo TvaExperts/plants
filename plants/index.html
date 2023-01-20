@@ -37,15 +37,17 @@
                         <a href="#contact" class="navigation__link">Contacts</a>
                     </li>
                 </ul>
+                <div class="header__burger" id="burger">
+                    <span></span>
+                </div>
             </nav>
+            
         </div>
     </header>
     <main class="main">
         <section class="welcome">
             <div class="wrapper welcome__wrapper">
-                <div class="welcome__img">
-                    <img class="img-leafs" src="./assets/img/welcome-leafs.png" alt="Leafs">
-                </div>
+                <div class="welcome__img"></div>
                 <div class="welcome__content">
                     <h1>We grow <span class="h1__colored">plants</span> and give you oxygen</h1>
                     <p class="welcome__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -62,9 +64,7 @@
                     <h2 class="about__title">We are <span class="title__colored">professional experienced</span> gardeners </h2>
                     <p class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
-                <div class="about__img">
-                    <img class="img-plant" src="./assets/img/about-img.png" alt="Houseplant">
-                </div>
+                <div class="about__img"></div>
             </div>
         </section>
         <section class="service" id="service">
@@ -160,7 +160,7 @@
             <div class="wrapper contact-us__wrapper">
                 <h2 class="contact-us__title">Contact us</h2>
                 <div class="contact-us__cities">
-                    <p class="city__title">City </p><span class="city__arrow"></span>
+                    <p class="city__title">City</p><span class="city__arrow"></span>
                 </div>
             </div>
         </section>
@@ -176,10 +176,38 @@
                 <div class="footer__school"><a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a></div>    
             </div>
             <ul class="footer__social-links">
-                <li class="social__item"><a href="https://www.instagram.com/rsschool_news/" class="social__icon icon_instagram" target="_blank"></a></li>
-                <li class="social__item"><a href="https://www.facebook.com/RollingScopesSchool/" class="social__icon icon_fb" target="_blank"></a></li>
-                <li class="social__item"><a href="https://twitter.com/rollingscopes" class="social__icon icon_twitter"></a></li>
-                <li class="social__item"><a href="#" class="social__icon icon_pinterest"></a></li>
+                <li class="social__item">
+                    <a href="https://www.instagram.com/rsschool_news/" class="social__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M17.36 2.66699c2.4 0 2.907.027 4.133.08 1.413.067 2.387.293 3.227.627.88.333 1.627.8 2.36 1.533.747.733 1.2 1.48 1.547 2.36.333.84.547 1.813.613 3.24001.067 1.267.08 1.76.08 4.427v2.133c0 2.667-.013 3.16-.08 4.427-.023 1.165-.246 2.27-.636 3.294l.022-.067c-.347.88-.8 1.627-1.533 2.36-.747.747-1.493 1.2-2.373 1.547-.84.333-1.813.547-3.227.613-1.267.067-1.773.08-4.44.08h-2.12c-2.667 0-3.16-.013-4.44-.08-1.16498-.023-2.26998-.246-3.29398-.636l.067.022c-.923-.353-1.71-.874-2.359-1.533l-.001-.001c-.666-.652-1.192-1.444-1.532-2.329l-.015-.045c-.367-.956-.59-2.062-.613-3.217v-.01c-.053-1.042-.083-2.263-.083-3.49 0-.226.001-.452.003-.677v.034-2.733c0-2.4.027-2.907.08-4.133.067-1.41301.293-2.38701.613-3.22701.347-.88.8-1.627 1.547-2.36.645-.667 1.434-1.19 2.317-1.519l.043-.014c.955-.371 2.06-.599 3.21498-.626h.012c1.227-.053 1.733-.08 4.133-.08h2.734Zm.027 2.4H14.6c-2.307 0-2.8.027-4 .08-1.29297.053-1.99997.267-2.46697.453-.627.24-1.06701.533-1.53301 1-.466.467-.76.907-1 1.533-.173.467-.4 1.173-.453 2.48001-.053 1.2-.08 1.68-.08 4v2.773c0 2.32.027 2.8.08 4 .053 1.293.267 2 .453 2.467.24.627.533 1.067 1 1.533.467.466.90701.76 1.53301 1 .467.187 1.17299.4 2.47997.453 1.293.067 1.76.08 4.64.08h1.48c2.893 0 3.347-.013 4.653-.08 1.293-.053 2-.267 2.467-.453.627-.24 1.067-.533 1.533-1 .466-.467.76-.907 1-1.533.187-.467.4-1.173.453-2.467.067-1.307.08-1.76.08-4.653v-1.467c0-2.893-.013-3.36-.08-4.667-.053-1.29301-.267-2.00001-.453-2.46701-.226-.601-.567-1.114-.999-1.532l-.001-.001c-.42-.433-.932-.774-1.505-.991l-.028-.009c-.732-.276-1.578-.441-2.462-.453h-.005c-1.028-.052-2.231-.082-3.442-.082-.196 0-.392.001-.588.002h.03l.001.001ZM16 9.14699c3.781 0 6.847 3.06501 6.847 6.84701S19.782 22.841 16 22.841c-3.781 0-6.84698-3.065-6.84698-6.847 0-3.782 3.06498-6.84701 6.84698-6.84701Zm0 2.40001c-2.456 0-4.447 1.991-4.447 4.447s1.991 4.447 4.447 4.447 4.447-1.991 4.447-4.447-1.991-4.447-4.447-4.447Zm7.107-4.26701c.884 0 1.6.716 1.6 1.6 0 .884-.716 1.60001-1.6 1.60001-.884 0-1.6-.71601-1.6-1.60001 0-.884.716-1.6 1.6-1.6Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="https://www.facebook.com/RollingScopesSchool/" class="social__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M13.04 29.333 13 17.666H8v-5h5V9.33302c0-4.493 2.787-6.667 6.8-6.667 1.92 0 3.573.133 4.053.2v4.707h-2.787c-2.173 0-2.6 1.04-2.6 2.55998v2.533h6.2l-1.667 5h-4.533v11.667h-5.427.001Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="https://twitter.com/rollingscopes" class="social__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M29.333 7.83998c-1 .493-2 .667-3.173.827 1.173-.667 2-1.667 2.333-3-1.005.608-2.176 1.071-3.423 1.322l-.07.012c-1.031-1.014-2.44-1.646-3.996-1.667H21c-2.84 0-5.333 2.507-5.333 5.50702 0 .493 0 .827.173 1.16-4.578-.178-8.61897-2.33702-11.31097-5.63902l-.022-.028c-.425.726-.676 1.598-.676 2.529 0 .109.003.218.01.326l-.001-.015c.034 1.87802 1.009 3.52102 2.473 4.48102l.021.013c-.84 0-1.667-.333-2.507-.667 0 2.667 1.84 4.84 4.333 5.333-.493.173-1 .173-1.493.173-.333 0-.667 0-1-.173.667 2.173 2.667 3.84 5.17297 3.84-1.79997 1.455-4.11597 2.335-6.63697 2.335-.071 0-.142-.001-.213-.002h.011-1.333c2.365 1.509 5.236 2.429 8.31597 2.493h.017c10 0 15.507-8.333 15.507-15.507v-.667c1.147-.79 2.093-1.78702 2.803-2.94402l.024-.042h-.002Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M16 2.66699C8.65699 2.69399 2.71399 8.65299 2.71399 16c0 5.599 3.452 10.393 8.34301 12.368l.089.032c-.133-1.053-.227-2.667.04-3.827l1.56-6.627s-.4-.8-.4-1.973c0-1.853 1.08-3.227 2.427-3.227 1.133 0 1.693.853 1.693 1.867 0 1.147-.733 2.853-1.12 4.44-.32 1.333.667 2.413 1.987 2.413 2.373 0 4.187-2.493 4.187-6.093 0-3.2-2.293-5.41301-5.573-5.41301-.076-.004-.164-.006-.253-.006-3.189 0-5.77301 2.58501-5.77301 5.77301v.006c0 1.147.44001 2.373.98701 3.04.107.133.12.253.08.387l-.373 1.507c-.053.24-.2.307-.44.187-1.68001-.787-2.72001-3.2-2.72001-5.173 0-4.2 3.06701-8.05301 8.82701-8.05301 4.613 0 8.227 3.28001 8.227 7.69301 0 4.6-2.907 8.293-6.933 8.293-1.333 0-2.613-.707-3.04-1.533l-.84 3.16c-.431 1.337-.992 2.498-1.688 3.563l.034-.056c1.17.372 2.516.587 3.911.587 7.364 0 13.333-5.97 13.333-13.333 0-7.34701-5.942-13.30601-13.282-13.33301h-.003l-.001-.002Z" />
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </div>
     </footer>

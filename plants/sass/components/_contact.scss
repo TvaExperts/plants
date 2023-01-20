@@ -1,24 +1,30 @@
 .contact-us {
     padding-top: 53px;
     background: $color_background;
-
     @include media-tablet {
         padding-top: 40px;
+    }
+    @include media-mobile {
+        padding-top: 25px;
     }
 }
 
 .contact-us__wrapper {
-    height: 497px;
+    padding-bottom: 352px;
+    text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
-    text-align: right;
-
     @include media-tablet {
-        height: 739px;
+        padding-bottom: 145px;
         text-align: center;
-        background-size: 30%;
-        background-position: center;
-        background-position: bottom;
+        background-size: 26%;
+        background-position: 51.7% 100%;
+    }
+    @include media-mobile {
+        padding-bottom: 14px;
+        text-align: center;
+        background-size: 26.2%;
+        background-position: 49.2% 100%;
     }
 }
 
@@ -26,25 +32,39 @@
     padding: 7px 5px 36px 0;
     text-align: center;
     font-weight: bold;
-
     @include media-tablet {
-        padding-bottom: 100px;
+        padding: 0;
+        padding-bottom: 99px;
+        @include font(4rem, 5.2rem, 700);
     }
+    @include media-mobile {
+        padding-bottom: 80px;
+        @include font(2.5rem, 3.3rem, 700);
+    }
+    
 }
 
 .contact-us__cities {
     width: 450px;
     height: 50px;
-    margin-bottom: 352px;
+    text-align: right;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     background: $color_dropdown_bg;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
     @include media-tablet {
         margin: 0 auto;
-        margin-bottom: 0px;
+        margin-bottom: 353px;
+    }
+    @include media-burger {
+        width: 92%;
+        margin: 0 auto;
+        margin-bottom: 353px;
+    }
+    @include media-mobile  { 
+        width: 90%;
+        margin-bottom: 243px;
     }
 }
 
@@ -65,4 +85,7 @@
     background-repeat: no-repeat;
     border-radius: 8px;
     cursor: pointer;
+    @include media-mobile {
+        margin-right: 20px;
+    }
 }

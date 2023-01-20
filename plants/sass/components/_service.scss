@@ -8,29 +8,40 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-
     @include media-tablet  {
         padding-top: 60px;
         padding-bottom: 0px;
         flex-direction: column;
     }
+    @include media-mobile  {
+        padding-top: 30px;
+    }
 }
 
 .service__title {
     max-width: 306px;
+    margin-right: 142px;
+    @include media-burger  {
+        margin-right: 0;
+    }
+    @include media-mobile  {
+        max-width: 187px;
+    }
 }
 
 .service__buttons {
-    padding: 29px 0px 0px 142px;
-    >.button {
-        margin-left: 33px;
-        &:first-child {
-            margin-left: 0;
-        }
-    }
-
+    padding-top: 29px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 38px;
     @include media-tablet  {
-        padding: 42px 0 40px 0;
+        gap: 37px;
+        padding: 42px 0 40px;
+    }
+    @include media-mobile  { 
+        padding-top: 38px;
+        gap: 9px 10px;
     }
 }
 
@@ -39,24 +50,33 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
     @include media-tablet  {
-        padding-bottom: 70px;
+        padding-bottom: 32px;
+    }
+    @include media-burger  {
+        justify-content: center;
+    }
+    @include media-mobile  { 
+        padding-bottom: 27px;
     }
 }
 
 .service__card {
     padding-bottom: 55px;
-
     @include media-tablet  {
-        padding-bottom: 40px;
+        padding-bottom: 38px;
+    }
+    @include media-mobile  { 
+        padding-bottom: 34px;
+        &:last-child {
+            padding-bottom: 0px;
+        }
     }
 }
 
 .card__img {
     border-radius: 20px 20px 0px 0px;
     display: block;
-
     @include media-tablet  {
         display: none;
     }
@@ -64,7 +84,6 @@
 
 .card__img-tablet {
     display: none;
-
     @include media-tablet  {
         display: block;
         border-radius: 20px 20px 0px 0px;
@@ -76,9 +95,11 @@
     text-align: center;
     border: 1px solid $color_border;
     border-radius: 0px 0px 20px 20px;
-
     @include media-tablet  {
-        padding: 9px 0 20px 0;
+        padding-bottom: 18px;
+    }
+    @include media-mobile  {
+        padding-bottom: 17px;
     }
 }
 
@@ -86,10 +107,12 @@
     padding-top: 14px;
     @include font(1.6rem,2rem);
     color: $color_title;
-    
     @include media-tablet  {
         max-width: 201px;
-        padding-top: 10px;
+        padding-top: 11px;
         margin: 0 auto;
+    }
+    @include media-mobile  {
+        padding-top: 12px;
     }
 }
