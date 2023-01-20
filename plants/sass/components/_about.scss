@@ -6,7 +6,7 @@
     justify-content: space-between;
     @include media-tablet  {
         padding-top: 40px;
-        padding-bottom: 93px;
+        padding-bottom: 95px;
         flex-direction: column;
         align-items: center;
         justify-content:center;
@@ -62,7 +62,7 @@
 }
 
 .about__img {
-    flex-basis: 38%;
+    flex-basis: 38.2%;
     height: 480px;
     flex-shrink: 0.6;
     background-image: url("../assets/img/about-img.png");
@@ -70,7 +70,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     @include media-tablet  { 
-        flex-basis: 260px;
+        flex-basis: 258px;
         width: 250px;
     }
     @include media-mobile  {

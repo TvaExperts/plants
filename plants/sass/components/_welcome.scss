@@ -26,7 +26,7 @@
     background-image: url("../assets/img/welcome-leafs.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     @include media-tablet  { 
         flex-basis: 42%;
         height: 270px;
@@ -37,7 +37,7 @@
 }
 
 .welcome__content {
-    flex-basis: 45%;
+    flex-basis: 44.9%;
     padding-top: 44px;
     @include media-tablet {
         padding-top: 3px;

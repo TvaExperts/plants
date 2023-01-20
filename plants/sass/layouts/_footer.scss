@@ -57,13 +57,17 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    @include media-tablet { 
+        padding-top: 8px;
+    }
     @include media-mobile {
         padding-top: 0;
     }
 }
 
 .social__item {
-    margin-left: 25px;
+    margin-left: 20px;
     list-style: none;
     &:first-child {
         margin-left: 0px;
@@ -71,8 +75,7 @@
 }
 
 .social__link {
-    width: 28px;
-    height: 28px;
+
     display: block;
     cursor: pointer;
 }
