@@ -4,11 +4,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    text-align: center;
     @include media-tablet {
         padding-bottom: 75px;
     }
     @include media-burger {
+        text-align: center;
         padding-top: 25px;
         padding-bottom: 40px;
         flex-direction: column;
@@ -40,7 +40,6 @@
         padding-bottom: 37px;
         padding-left: 0;
         @include font(2.5rem, 3rem, bold);
-        
     }
 }
 
@@ -57,23 +56,41 @@
 
 .dropdown {
     width: 250px;
-    padding: 16px 0 14px 0;
     margin: 16px 40px;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items:center;
+    padding: 16px 40px;
     background: $color_background;
     border-radius: 20px;
+    @extend %transition;
+
     @include media-mobile  { 
         width: 180px;
         margin: 7px 18px;
     }
+
+    .dropdown__description {
+        display: none;
+    }
+    .dropdown__price {
+        display: none;
+    }
+    .button__price {
+        display: none;
+    }
+
 }
+
+.dropdown__header {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-align: left;
+}
+
 
 .dropdown__arrow {
     width: 16px;
     height: 16px;
-    margin-right: 40px;
     background: $color_arrow_bg_prices;
     background-image: url("../assets/img/prices/arrow-down.svg");
     background-position: center;
@@ -83,7 +100,6 @@
 }
 
 .dropdown__title {
-    padding-left: 40px;
     @include font(2rem, 2rem, bold);
     color: $color_black;
     @include media-mobile {
@@ -91,6 +107,54 @@
         @include font(1.5rem, 2rem, bold);
     }
 }
+
+
+.dropdown-opened {
+
+    background: $color_dropdown_bg;
+
+    .dropdown__description {
+        display: block;
+    }
+    .dropdown__price {
+        display: block;
+    }
+    .button__price {
+        display: block;
+    }
+
+
+}
+
+.dropdown__description {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-right: 6px;
+    margin-top: 10px;
+    @include font(1rem, 1rem, 300);
+    color: $color_title;
+    text-align: left;
+    border-top: 0.5px solid $color_arrow_bg_contact; 
+}
+
+.dropdown__price {
+    padding-bottom: 6px;
+    @include font(1.2rem, 2rem, 700);
+    color: $color_additional;
+}
+
+.price__value {
+    @include font(1.6rem, 2rem, 700);
+}
+
+.price__hour {
+    color: $color_black;
+    @include font(1.2rem, 2rem, 400);
+}
+
+
+
+
 
 .prices__right-column {
     text-align: end;

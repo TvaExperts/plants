@@ -50,7 +50,6 @@
 .button-on {
     background: $color_additional;
     color: white;
-   
 }
 
 .button-inactive {
@@ -62,6 +61,20 @@
         background: none;
         color: $color_title;
     }
+}
+
+.button__price{
+    width: 86px;
+    height: 25px;
+    
+    background: white;
+    color: $color_title;
+    @extend %font-primary;
+    @include font(1.4rem, 2rem, 700);
+    text-align: center;
+    
+    border-radius: 10px;
+    border: none;
 }
 
 

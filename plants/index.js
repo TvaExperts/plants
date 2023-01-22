@@ -1,13 +1,8 @@
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     const menuLinks=document.querySelectorAll('.navigation__link');
     
-
-/* -------------  Burger menu -------------------- */
+    /* -------------  Burger menu -------------------- */
 
     document.getElementById('burger').addEventListener('click', function() {
         document.querySelector('.header__navigation').classList.toggle('_open');
@@ -53,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const getNumberOfSelectedButtons = () => {
         let numberOfSelectedButtons = 0;
-        serviceButtons.forEach (button => {
+        serviceButtons.forEach(button => {
             if (button.classList.contains('button-on')) numberOfSelectedButtons++;
         })
         return numberOfSelectedButtons;
@@ -98,4 +93,35 @@ document.addEventListener('DOMContentLoaded', function () {
                card.classList.add('card-blur');
         })
     }
+
+    /* -------------  Prices buttons -------------------- */
+ 
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+
+
+
+    const handlerClickButtonPrices = (event) => { 
+        console.log(event.target.parentElement.parentElement);
+        closeAllPrices();
+        event.target.parentElement.parentElement.classList.toggle('dropdown-opened');
+
+        
+    }
+
+
+    dropdowns.forEach(dropdown => {
+        dropdown.querySelector('.dropdown__arrow').addEventListener('click', handlerClickButtonPrices);
+    });
+
+    const closeAllPrices=()=> {
+        dropdowns.forEach(dropdown=> {
+            dropdown.classList.remove('dropdown-opened');
+        })
+    }
+
+
+
+
+
 })

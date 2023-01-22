@@ -1,4 +1,4 @@
-.navigation__link, .navigation, .service__card, .social__link svg, .footer__link, .header__burger:before,
+.navigation__link, .navigation, .dropdown, .service__card, .social__link svg, .footer__link, .header__burger:before,
 .header__burger:after, .header__burger, .button {
   transition: all 0.3s ease-out;
 }
@@ -7,7 +7,7 @@
   font-family: "Inika", Verdana, sans-serif;
 }
 
-.prices__title, .button_welcome, body {
+.prices__title, .button__price, .button_welcome, body {
   font-family: "Inter", Verdana, sans-serif;
 }
 
@@ -162,6 +162,20 @@ h3 {
 .button-inactive:hover {
   background: none;
   color: #717171;
+}
+
+.button__price {
+  width: 86px;
+  height: 25px;
+  background: white;
+  color: #717171;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
 }
 
 .wrapper {
@@ -752,7 +766,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  text-align: center;
 }
 @media (max-width: 768px) {
   .prices__wrapper {
@@ -761,6 +774,7 @@ h3 {
 }
 @media (max-width: 659px) {
   .prices__wrapper {
+    text-align: center;
     padding-top: 25px;
     padding-bottom: 40px;
     flex-direction: column;
@@ -824,11 +838,8 @@ h3 {
 
 .dropdown {
   width: 250px;
-  padding: 16px 0 14px 0;
   margin: 16px 40px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 16px 40px;
   background: #EDF2EC;
   border-radius: 20px;
 }
@@ -838,11 +849,26 @@ h3 {
     margin: 7px 18px;
   }
 }
+.dropdown .dropdown__description {
+  display: none;
+}
+.dropdown .dropdown__price {
+  display: none;
+}
+.dropdown .button__price {
+  display: none;
+}
+
+.dropdown__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
 
 .dropdown__arrow {
   width: 16px;
   height: 16px;
-  margin-right: 40px;
   background: #D9D9D9;
   background-image: url("../assets/img/prices/arrow-down.svg");
   background-position: center;
@@ -852,7 +878,6 @@ h3 {
 }
 
 .dropdown__title {
-  padding-left: 40px;
   font-size: 2rem;
   line-height: 2rem;
   font-weight: bold;
@@ -867,6 +892,57 @@ h3 {
     font-weight: bold;
     font-style: normal;
   }
+}
+
+.dropdown-opened {
+  background: #D6E7D2;
+}
+.dropdown-opened .dropdown__description {
+  display: block;
+}
+.dropdown-opened .dropdown__price {
+  display: block;
+}
+.dropdown-opened .button__price {
+  display: block;
+}
+
+.dropdown__description {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 6px;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  color: #717171;
+  text-align: left;
+  border-top: 0.5px solid #AEA1A1;
+}
+
+.dropdown__price {
+  padding-bottom: 6px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #E06733;
+}
+
+.price__value {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.price__hour {
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .prices__right-column {
