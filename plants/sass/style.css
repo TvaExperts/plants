@@ -1,4 +1,4 @@
-.navigation__link, .navigation, .social__link svg, .footer__link, .header__burger:before,
+.navigation__link, .navigation, .service__card, .social__link svg, .footer__link, .header__burger:before,
 .header__burger:after, .header__burger, .button {
   transition: all 0.3s ease-out;
 }
@@ -146,6 +146,22 @@ h3 {
   .button_service {
     width: 121px;
   }
+}
+
+.button-on {
+  background: #E06733;
+  color: white;
+}
+
+.button-inactive {
+  background: none;
+  color: #717171;
+  border-color: #717171;
+  cursor: auto;
+}
+.button-inactive:hover {
+  background: none;
+  color: #717171;
 }
 
 .wrapper {
@@ -666,6 +682,10 @@ h3 {
   .service__card:last-child {
     padding-bottom: 0px;
   }
+}
+
+.card-blur {
+  filter: blur(2px);
 }
 
 .card__img {
