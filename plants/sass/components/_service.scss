@@ -73,12 +73,12 @@
             padding-bottom: 0px;
         }
     }
+    &.card-blur {
+        filter: blur(2px);
+    }
 }
 
-.card-blur {
-    filter: blur(2px);
 
-}
 
 .card__img {
     border-radius: 20px 20px 0px 0px;

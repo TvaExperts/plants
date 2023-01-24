@@ -147,19 +147,17 @@ h3 {
     width: 121px;
   }
 }
-
-.button-on {
+.button.button-on {
   background: #E06733;
   color: white;
 }
-
-.button-inactive {
+.button.button-inactive {
   background: none;
   color: #717171;
   border-color: #717171;
   cursor: auto;
 }
-.button-inactive:hover {
+.button.button-inactive:hover {
   background: none;
   color: #717171;
 }
@@ -697,8 +695,7 @@ h3 {
     padding-bottom: 0px;
   }
 }
-
-.card-blur {
+.service__card.card-blur {
   filter: blur(2px);
 }
 

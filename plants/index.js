@@ -1,12 +1,29 @@
-document.addEventListener('DOMContentLoaded', function () {
 
-    const menuLinks=document.querySelectorAll('.navigation__link');
-    
-    /* -------------  Burger menu -------------------- */
+window.onload = function () {
 
-    document.getElementById('burger').addEventListener('click', function() {
+    // Burger menu 
+    addBurgerClickHandler();
+    addMenuLinkClickHandler();
+
+    // Service buttons
+
+    addServiceButtonsClickHandler();
+
+}
+
+ /* -------------  Burger menu -------------------- */
+
+
+const addBurgerClickHandler = () => {
+
+    document.querySelector('.header__burger').addEventListener('click', function() {
         document.querySelector('.header__navigation').classList.toggle('_open');
     });
+}
+
+const addMenuLinkClickHandler = () => {
+
+    const menuLinks=document.querySelectorAll('.navigation__link');
 
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener('click', function() {
@@ -20,108 +37,88 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    /* -------------  Service buttons -------------------- */
+}
 
+/* ------------- Service buttons -------------------- */
+
+const addServiceButtonsClickHandler = () => {
     const serviceButtons = document.querySelectorAll('.button_service');
-    const serviceCards = document.querySelectorAll('.service__card');
-
-    const handlerClickButtonServise = (event) => {
-        if (event.target.classList.contains('button-inactive')) return;
-        removeBlurServices();
-        event.target.classList.toggle('button-on');
-        const numberOfSelectedButtons = getNumberOfSelectedButtons();
-        numberOfSelectedButtons === 2 
-            ? deactivateLastButtonServices()
-            : activateButtonServices();
-        if (numberOfSelectedButtons) blurUnselectedServices();
-    }
 
     serviceButtons.forEach(serviceButton => {
-        serviceButton.addEventListener('click', handlerClickButtonServise);
+        serviceButton.addEventListener('click', (e)=> {
+            if (e.target.classList.contains('button-inactive')) return;
+            removeBlurAllServices();
+            e.target.classList.toggle('button-on');
+            const numberOfSelectedButtonsServices = getNumberOfSelectedButtonsServices();
+            numberOfSelectedButtonsServices === 2 
+                ? deactivateLastButtonServices()
+                : activateAllButtonsServices();
+            if (numberOfSelectedButtonsServices) blurUnselectedServices();
+        });
     });
+}
 
-    const removeBlurServices = () => {
-        serviceCards.forEach (card => {
-            card.classList.remove('card-blur');
-        })
-    }
 
-    const getNumberOfSelectedButtons = () => {
-        let numberOfSelectedButtons = 0;
-        serviceButtons.forEach(button => {
-            if (button.classList.contains('button-on')) numberOfSelectedButtons++;
-        })
-        return numberOfSelectedButtons;
-    }
+const removeBlurAllServices = () => {
+    const serviceCards = document.querySelectorAll('.service__card');
+    serviceCards.forEach (card => {
+        card.classList.remove('card-blur');
+    })
+}
 
-    const deactivateLastButtonServices = () => {
-        serviceButtons.forEach(button => {
-            if (!button.classList.contains('button-on')) {
-                button.classList.add('button-inactive');
-            }
-        })
-    }
+const getNumberOfSelectedButtonsServices = () => {
+    let numberOfSelectedButtonsServices = 0;
+    const serviceButtons = document.querySelectorAll('.button_service');
+    serviceButtons.forEach(button => {
+        if (button.classList.contains('button-on')) numberOfSelectedButtonsServices++;
+    })
+    return numberOfSelectedButtonsServices;
+}
 
-    const activateButtonServices = () => {
-        serviceButtons.forEach(button => {
-            if (button.classList.contains('button-inactive')) {
-                button.classList.remove('button-inactive');
-            }
-        })
-    }
-
-    const blurUnselectedServices = () => {
-        serviceButtons.forEach(button => {
-            if (!button.classList.contains('button-on')) {
-                blurCardServicesByButtonText(button.innerHTML);
-            }
-        })
-    }
-
-    const blurCardServicesByButtonText = (buttonText) => {
-        let captionStart = '';
-        switch (buttonText) {
-            case 'Gardens': captionStart = 'Garden';
-                break;
-            case 'Lawn': captionStart = 'Lawn';
-                break;
-            case 'Planting': captionStart = 'Planting';
-                break;
+const deactivateLastButtonServices = () => {
+    const serviceButtons = document.querySelectorAll('.button_service');
+    serviceButtons.forEach(button => {
+        if (!button.classList.contains('button-on')) {
+            button.classList.add('button-inactive');
         }
-        serviceCards.forEach (card => {
-            if (card.querySelector('.card__caption').innerHTML.includes(captionStart))
-               card.classList.add('card-blur');
-        })
+    })
+}
+
+const activateAllButtonsServices = () => {
+    const serviceButtons = document.querySelectorAll('.button_service');
+    serviceButtons.forEach(button => {
+        if (button.classList.contains('button-inactive')) {
+            button.classList.remove('button-inactive');
+        }
+    })
+}
+
+const blurUnselectedServices = () => {
+    const serviceButtons = document.querySelectorAll('.button_service');
+    serviceButtons.forEach(button => {
+        if (!button.classList.contains('button-on')) {
+            blurCardServicesByButtonText(button.innerHTML);
+        }
+    })
+}
+
+const blurCardServicesByButtonText = (buttonText) => {
+    let captionStart = '';
+    const serviceCards = document.querySelectorAll('.service__card');
+    switch (buttonText) {
+        case 'Gardens': captionStart = 'Garden';
+            break;
+        case 'Lawn': captionStart = 'Lawn';
+            break;
+        case 'Planting': captionStart = 'Planting';
+            break;
     }
-
-    /* -------------  Prices buttons -------------------- */
- 
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-
-
-
-    const handlerClickButtonPrices = (event) => { 
-        console.log(event.target.parentElement.parentElement);
-        closeAllPrices();
-        event.target.parentElement.parentElement.classList.toggle('dropdown-opened');
-
-        
-    }
-
-
-    dropdowns.forEach(dropdown => {
-        dropdown.querySelector('.dropdown__arrow').addEventListener('click', handlerClickButtonPrices);
-    });
-
-    const closeAllPrices=()=> {
-        dropdowns.forEach(dropdown=> {
-            dropdown.classList.remove('dropdown-opened');
-        })
-    }
+    serviceCards.forEach (card => {
+        if (card.querySelector('.card__caption').innerHTML.includes(captionStart))
+           card.classList.add('card-blur');
+    })
+}
 
 
 
 
-
-})

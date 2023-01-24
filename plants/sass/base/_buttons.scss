@@ -45,23 +45,26 @@
             width: 121px;
         }
     }
-}
-
-.button-on {
-    background: $color_additional;
-    color: white;
-}
-
-.button-inactive {
-    background:none;
-    color: $color_title;
-    border-color: $color_title;
-    cursor: auto;
-    &:hover {
-        background: none;
-        color: $color_title;
+    &.button-on {
+        background: $color_additional;
+        color: white;
     }
+    &.button-inactive {
+        background:none;
+        color: $color_title;
+        border-color: $color_title;
+        cursor: auto;
+        &:hover {
+            background: none;
+            color: $color_title;
+        }
+    }
+
 }
+
+
+
+
 
 .button__price{
     width: 86px;
