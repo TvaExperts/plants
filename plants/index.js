@@ -1,3 +1,29 @@
+const adresses = [
+    {
+        id: 1, 
+        city: 'Canandaigua, NY',
+        phone: '+1	585	393 0001',
+        officeAdress: '151 Charlotte Street'
+    },
+    {
+        id: 2, 
+        city: 'New York City',
+        phone: '+1	212	456 0002',
+        officeAdress: '9 East 91st Street'
+    },
+    {
+        id: 3, 
+        city: 'Yonkers, NY',
+        phone: '+1 914 678 0003',
+        officeAdress: '511 Warburton Ave'
+    },
+    {
+        id: 4, 
+        city: 'Sherrill, NY',
+        phone: '+1	315	908 0004',
+        officeAdress: '14 WEST Noyes BLVD'
+    }
+]
 
 window.onload = function () {
 
@@ -12,6 +38,10 @@ window.onload = function () {
     // Prices dropdowns
 
     addPricesDropdownsClickHandler();
+
+    // Contacts select
+
+    addContactsSelectClickHandler();
 
 }
 
@@ -126,40 +156,29 @@ const blurCardServicesByButtonText = (buttonText) => {
 
 const addPricesDropdownsClickHandler = () => {
     const pricesDropdowns = document.querySelectorAll('.dropdown');
-
     pricesDropdowns.forEach(pricesDropdown => {
         pricesDropdown.addEventListener('click', (e)=> {
             if (e.target.classList.contains('dropdown__arrow')){
                 if (pricesDropdown.classList.contains('dropdown-opened')) {
                     pricesDropdown.classList.remove('dropdown-opened');
                 } else {
-                    deactivateAllPricesDropdowns ();
+                    closeAllPricesDropdowns();
                     pricesDropdown.classList.add('dropdown-opened');
                 }
-
-
-
-
             }
-                
-            //e.target.querySelector()
-            /*
-            if (e.target.classList.contains('button-inactive')) return;
-            removeBlurAllServices();
-            e.target.classList.toggle('button-on');
-            const numberOfSelectedButtonsServices = getNumberOfSelectedButtonsServices();
-            numberOfSelectedButtonsServices === 2 
-                ? deactivateLastButtonServices()
-                : activateAllButtonsServices();
-            if (numberOfSelectedButtonsServices) blurUnselectedServices();*/
         });
     });
 }
 
-const deactivateAllPricesDropdowns = () => {
+const closeAllPricesDropdowns = () => {
     const pricesDropdowns = document.querySelectorAll('.dropdown');
     pricesDropdowns.forEach(pricesDropdown => {
         pricesDropdown.classList.remove('dropdown-opened');
     })
 }
 
+/* ------------- Contacts select -------------------- */
+
+const addContactsSelectClickHandler = () => {
+    
+}

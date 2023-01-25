@@ -45,6 +45,17 @@
             width: 121px;
         }
     }
+
+    &_call {
+        width: 122px;
+        height: 26px;
+        padding: 0;
+        margin-top: 10px;
+        @include font(1rem, 1.3rem, 700);
+        color: $color_title;
+    }
+
+
     &.button-on {
         background: $color_additional;
         color: white;

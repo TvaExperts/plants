@@ -10,7 +10,7 @@
 }
 
 .contact-us__wrapper {
-    padding-bottom: 352px;
+    padding-bottom: 79px;
     text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
@@ -44,11 +44,16 @@
     
 }
 
-.contact-us__cities {
+.contact-us__content {
+    text-align: right;
+    display: inline-block; 
+}
+
+.contact-us__select {
     width: 450px;
     height: 50px;
-    text-align: right;
-    display: inline-flex;
+    
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background: $color_dropdown_bg;
@@ -68,14 +73,14 @@
     }
 }
 
-.city__title {
+.select__title {
     padding: 5px 20px;
-    @include font(2rem,4rem);
+    @include font(2rem, 4rem);
     letter-spacing: 0.05em;
     color: $color_title;
 }
 
-.city__arrow {
+.select__arrow {
     width: 16px;
     height: 16px;
     margin-right: 35px;
@@ -89,3 +94,37 @@
         margin-right: 20px;
     }
 }
+
+.adress__info {
+
+    width: 448px;
+    margin-top: 47px;
+    padding: 17px 0 32px 33px;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.adress__city {
+    display: flex;
+    justify-content: start;
+    text-align: left;
+
+    & p {
+        flex-basis: 32%;
+        @include font(1.6rem, 4rem);
+        letter-spacing: 0.05em;
+        color: #000000;
+        
+    }
+    & span {
+        @include font(1.6rem, 4rem);
+        letter-spacing: 0.05em;
+        color: $color_title;
+    }
+
+}
+
+
+

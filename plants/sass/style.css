@@ -151,6 +151,17 @@ h3 {
     width: 121px;
   }
 }
+.button_call {
+  width: 122px;
+  height: 26px;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #717171;
+}
 .button.button-on {
   background: #E06733;
   color: white;
@@ -918,6 +929,12 @@ h3 {
 .dropdown-opened .button__price {
   display: block;
 }
+.dropdown-opened .dropdown__arrow {
+  background: #AEA1A1;
+  background-image: url("../assets/img/prices/arrow-up.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .dropdown__description {
   padding-top: 6px;
@@ -1083,7 +1100,7 @@ h3 {
 }
 
 .contact-us__wrapper {
-  padding-bottom: 352px;
+  padding-bottom: 79px;
   text-align: right;
   background-image: url("./../assets/img/contact/woman.png");
   background-repeat: no-repeat;
@@ -1130,37 +1147,41 @@ h3 {
   }
 }
 
-.contact-us__cities {
+.contact-us__content {
+  text-align: right;
+  display: inline-block;
+}
+
+.contact-us__select {
   width: 450px;
   height: 50px;
-  text-align: right;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background: #D6E7D2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 768px) {
-  .contact-us__cities {
+  .contact-us__select {
     margin: 0 auto;
     margin-bottom: 353px;
   }
 }
 @media (max-width: 659px) {
-  .contact-us__cities {
+  .contact-us__select {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 353px;
   }
 }
 @media (max-width: 380px) {
-  .contact-us__cities {
+  .contact-us__select {
     width: 90%;
     margin-bottom: 243px;
   }
 }
 
-.city__title {
+.select__title {
   padding: 5px 20px;
   font-size: 2rem;
   line-height: 4rem;
@@ -1170,7 +1191,7 @@ h3 {
   color: #717171;
 }
 
-.city__arrow {
+.select__arrow {
   width: 16px;
   height: 16px;
   margin-right: 35px;
@@ -1182,9 +1203,42 @@ h3 {
   cursor: pointer;
 }
 @media (max-width: 380px) {
-  .city__arrow {
+  .select__arrow {
     margin-right: 20px;
   }
+}
+
+.adress__info {
+  width: 448px;
+  margin-top: 47px;
+  padding: 17px 0 32px 33px;
+  background: #EDF2EC;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.adress__city {
+  display: flex;
+  justify-content: start;
+  text-align: left;
+}
+.adress__city p {
+  flex-basis: 32%;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+.adress__city span {
+  font-size: 1.6rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #717171;
 }
 
 .contact-us {
@@ -1203,7 +1257,7 @@ h3 {
 }
 
 .contact-us__wrapper {
-  padding-bottom: 352px;
+  padding-bottom: 79px;
   text-align: right;
   background-image: url("./../assets/img/contact/woman.png");
   background-repeat: no-repeat;
@@ -1250,37 +1304,41 @@ h3 {
   }
 }
 
-.contact-us__cities {
+.contact-us__content {
+  text-align: right;
+  display: inline-block;
+}
+
+.contact-us__select {
   width: 450px;
   height: 50px;
-  text-align: right;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background: #D6E7D2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 768px) {
-  .contact-us__cities {
+  .contact-us__select {
     margin: 0 auto;
     margin-bottom: 353px;
   }
 }
 @media (max-width: 659px) {
-  .contact-us__cities {
+  .contact-us__select {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 353px;
   }
 }
 @media (max-width: 380px) {
-  .contact-us__cities {
+  .contact-us__select {
     width: 90%;
     margin-bottom: 243px;
   }
 }
 
-.city__title {
+.select__title {
   padding: 5px 20px;
   font-size: 2rem;
   line-height: 4rem;
@@ -1290,7 +1348,7 @@ h3 {
   color: #717171;
 }
 
-.city__arrow {
+.select__arrow {
   width: 16px;
   height: 16px;
   margin-right: 35px;
@@ -1302,7 +1360,40 @@ h3 {
   cursor: pointer;
 }
 @media (max-width: 380px) {
-  .city__arrow {
+  .select__arrow {
     margin-right: 20px;
   }
+}
+
+.adress__info {
+  width: 448px;
+  margin-top: 47px;
+  padding: 17px 0 32px 33px;
+  background: #EDF2EC;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.adress__city {
+  display: flex;
+  justify-content: start;
+  text-align: left;
+}
+.adress__city p {
+  flex-basis: 32%;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+.adress__city span {
+  font-size: 1.6rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #717171;
 }/*# sourceMappingURL=style.css.map */
