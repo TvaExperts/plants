@@ -1,6 +1,5 @@
 .prices__wrapper {
-    padding-top: 39px;
-    padding-bottom: 102px;
+    padding: 39px 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -28,6 +27,7 @@
     @extend %font-primary;
     @include font(4rem, 4.8rem, bold);
     text-align: left;
+    @extend %transition;
     @include media-tablet {
         padding-bottom: 58px;
         padding-left: 15px;
@@ -48,6 +48,7 @@
     padding: 17px 0;
     border: 1px solid $color_border;
     border-radius: 20px;
+    @extend %transition-long;
     @include media-mobile  { 
        padding: 21px 0;
        max-width: 224px;
@@ -60,23 +61,36 @@
     padding: 16px 40px;
     background: $color_background;
     border-radius: 20px;
-    @extend %transition;
+    @extend %transition-long;
 
     @include media-mobile  { 
         width: 180px;
         margin: 7px 18px;
     }
 
-    .dropdown__description {
-        display: none;
-    }
-    .dropdown__price {
-        display: none;
-    }
-    .button__price {
-        display: none;
+   
+}
+
+.dropdown__description {
+    display: none;
+}
+.dropdown__price {
+    display: none;
+}
+.button__price {
+    display: none;
+    cursor: pointer;
+    @extend %transition;
+
+    &:hover {
+        background: $color_additional;
+        color: white;
     }
 
+}
+
+.dropdown__link {
+    text-decoration: none;
 }
 
 .dropdown__header {
@@ -112,6 +126,7 @@
 .dropdown-opened {
 
     background: $color_dropdown_bg;
+    @extend %transition-long;
 
     .dropdown__description {
         display: block;
@@ -141,6 +156,7 @@
     padding-bottom: 6px;
     @include font(1.2rem, 2rem, 700);
     color: $color_additional;
+
 }
 
 .price__value {
@@ -152,12 +168,9 @@
     @include font(1.2rem, 2rem, 400);
 }
 
-
-
-
-
 .prices__right-column {
     text-align: end;
+    padding-bottom: 63px;
     @include media-tablet {
         padding-top: 101px;
     }

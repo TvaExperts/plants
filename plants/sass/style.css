@@ -1,6 +1,10 @@
-.navigation__link, .navigation, .dropdown, .service__card, .social__link svg, .footer__link, .header__burger:before,
+.navigation__link, .navigation, .button__price, .prices__title, .service__card, .social__link svg, .footer__link, .header__burger:before,
 .header__burger:after, .header__burger, .button {
   transition: all 0.3s ease-out;
+}
+
+.dropdown-opened, .dropdown, .prices__dropdowns {
+  transition: all 1s ease-out;
 }
 
 .navigation__link, .logo__link, .button, h2 {
@@ -758,8 +762,7 @@ h3 {
 }
 
 .prices__wrapper {
-  padding-top: 39px;
-  padding-bottom: 102px;
+  padding: 39px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -846,14 +849,26 @@ h3 {
     margin: 7px 18px;
   }
 }
-.dropdown .dropdown__description {
+
+.dropdown__description {
   display: none;
 }
-.dropdown .dropdown__price {
+
+.dropdown__price {
   display: none;
 }
-.dropdown .button__price {
+
+.button__price {
   display: none;
+  cursor: pointer;
+}
+.button__price:hover {
+  background: #E06733;
+  color: white;
+}
+
+.dropdown__link {
+  text-decoration: none;
 }
 
 .dropdown__header {
@@ -944,6 +959,7 @@ h3 {
 
 .prices__right-column {
   text-align: end;
+  padding-bottom: 63px;
 }
 @media (max-width: 768px) {
   .prices__right-column {

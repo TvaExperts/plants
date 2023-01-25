@@ -9,6 +9,10 @@ window.onload = function () {
 
     addServiceButtonsClickHandler();
 
+    // Prices dropdowns
+
+    addPricesDropdownsClickHandler();
+
 }
 
  /* -------------  Burger menu -------------------- */
@@ -57,7 +61,6 @@ const addServiceButtonsClickHandler = () => {
         });
     });
 }
-
 
 const removeBlurAllServices = () => {
     const serviceCards = document.querySelectorAll('.service__card');
@@ -119,6 +122,44 @@ const blurCardServicesByButtonText = (buttonText) => {
     })
 }
 
+/* ------------- Prices dropdowns -------------------- */
+
+const addPricesDropdownsClickHandler = () => {
+    const pricesDropdowns = document.querySelectorAll('.dropdown');
+
+    pricesDropdowns.forEach(pricesDropdown => {
+        pricesDropdown.addEventListener('click', (e)=> {
+            if (e.target.classList.contains('dropdown__arrow')){
+                if (pricesDropdown.classList.contains('dropdown-opened')) {
+                    pricesDropdown.classList.remove('dropdown-opened');
+                } else {
+                    deactivateAllPricesDropdowns ();
+                    pricesDropdown.classList.add('dropdown-opened');
+                }
 
 
+
+
+            }
+                
+            //e.target.querySelector()
+            /*
+            if (e.target.classList.contains('button-inactive')) return;
+            removeBlurAllServices();
+            e.target.classList.toggle('button-on');
+            const numberOfSelectedButtonsServices = getNumberOfSelectedButtonsServices();
+            numberOfSelectedButtonsServices === 2 
+                ? deactivateLastButtonServices()
+                : activateAllButtonsServices();
+            if (numberOfSelectedButtonsServices) blurUnselectedServices();*/
+        });
+    });
+}
+
+const deactivateAllPricesDropdowns = () => {
+    const pricesDropdowns = document.querySelectorAll('.dropdown');
+    pricesDropdowns.forEach(pricesDropdown => {
+        pricesDropdown.classList.remove('dropdown-opened');
+    })
+}
 

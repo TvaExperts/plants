@@ -2,6 +2,10 @@
     transition: all .3s ease-out;
 }
 
+%transition-long {
+    transition: all 1s ease-out;
+}
+
 %font-additional {
     font-family: 'Inika', Verdana, sans-serif;
 }
