@@ -10,7 +10,7 @@
 }
 
 .contact-us__wrapper {
-    padding-bottom: 79px;
+    padding-bottom: 89px;
     text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
@@ -47,12 +47,50 @@
 .contact-us__content {
     text-align: right;
     display: inline-block; 
+    position: relative;
+    height: 314px;
+
+    &.city-selected {
+
+        .adress__info {
+            display: block;
+        } 
+
+        .contact-us__select {
+            background: $color_menu_bg;
+            box-shadow: none;
+        }
+
+        .select__arrow {
+            background-color: $color_arrow_up_bg;
+        }
+
+        .select__title {
+            @include font(1.6rem, 2rem);
+        }
+    }
+
+    &.select-opened {
+        
+        .select__dropdown {
+            display: block;
+        }
+
+        .contact-us__select {
+            background: $color_menu_bg;
+            box-shadow: none;
+        }
+        
+        .select__arrow {
+            transform: rotate(180deg);
+            background-color: $color_arrow_up_bg;
+        }
+    }
 }
 
 .contact-us__select {
     width: 450px;
     height: 50px;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,7 +123,7 @@
     height: 16px;
     margin-right: 35px;
     background: $color_arrow_bg_contact;
-    background-image: url("../assets/img/contact/arrow.svg");
+    background-image: url("../assets/img/arrow-down-white.svg");
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -95,35 +133,60 @@
     }
 }
 
-.adress__info {
+.select__dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 450px;
+    padding: 30px 50px 10px 20px;
+    text-align: left;
+    background: $color_select_dropdown_bg;
+}
 
+.select__city-item {
+    padding-left: 6px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $color_arrow_bg_prices;
+    @include font(1.6rem, 4rem);
+    letter-spacing: 0.05em;
+    color: $color_primary;
+    cursor: pointer;
+    &:hover {
+        color: $color_title;
+        border-bottom: 1px solid $color_title;
+    }
+    
+}
+
+.adress__info {
+    display: none;
     width: 448px;
     margin-top: 47px;
     padding: 17px 0 32px 33px;
     background: #EDF2EC;
     border: 1px solid #000000;
     border-radius: 20px;
-    text-align: center;
 }
 
-.adress__city {
+.adress__line {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     text-align: left;
-
     & p {
         flex-basis: 32%;
         @include font(1.6rem, 4rem);
         letter-spacing: 0.05em;
         color: #000000;
-        
     }
     & span {
         @include font(1.6rem, 4rem);
         letter-spacing: 0.05em;
         color: $color_title;
     }
+}
 
+.call__link {
+    padding-right: 162px;
 }
 
 

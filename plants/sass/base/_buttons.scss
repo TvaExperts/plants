@@ -46,11 +46,30 @@
         }
     }
 
+    &_price {
+        width: 86px;
+        height: 25px;
+        display: none;
+        @extend %transition;
+        background: white;
+        color: $color_title;
+        @extend %font-primary;
+        @include font(1.4rem, 2rem, 700);
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background: $color_additional;
+            color: white;
+        }
+    }
+
     &_call {
         width: 122px;
         height: 26px;
         padding: 0;
-        margin-top: 10px;
+        margin-top: 19px;
         @include font(1rem, 1.3rem, 700);
         color: $color_title;
     }
@@ -74,22 +93,6 @@
 }
 
 
-
-
-
-.button__price{
-    width: 86px;
-    height: 25px;
-    
-    background: white;
-    color: $color_title;
-    @extend %font-primary;
-    @include font(1.4rem, 2rem, 700);
-    text-align: center;
-    
-    border-radius: 10px;
-    border: none;
-}
 
 
 

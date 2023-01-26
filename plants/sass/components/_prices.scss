@@ -1,5 +1,5 @@
 .prices__wrapper {
-    padding: 39px 0;
+    padding: 39px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -27,7 +27,6 @@
     @extend %font-primary;
     @include font(4rem, 4.8rem, bold);
     text-align: left;
-    @extend %transition;
     @include media-tablet {
         padding-bottom: 58px;
         padding-left: 15px;
@@ -48,7 +47,6 @@
     padding: 17px 0;
     border: 1px solid $color_border;
     border-radius: 20px;
-    @extend %transition-long;
     @include media-mobile  { 
        padding: 21px 0;
        max-width: 224px;
@@ -57,60 +55,47 @@
 
 .dropdown {
     width: 250px;
-    margin: 16px 40px;
-    padding: 16px 40px;
+    margin: 16px 40px 32px;
+    padding: 15px 40px;
     background: $color_background;
     border-radius: 20px;
-    @extend %transition-long;
-
+    &:last-child {
+        margin-bottom: 16px;
+    }
     @include media-mobile  { 
         width: 180px;
         margin: 7px 18px;
     }
-}
 
-.dropdown__description {
-    display: none;
-}
-.dropdown__price {
-    display: none;
-}
-.button__price {
-    display: none;
-    cursor: pointer;
-    @extend %transition;
+    &.dropdown-opened {
 
-    &:hover {
-        background: $color_additional;
-        color: white;
+        background: $color_dropdown_bg;
+       
+    
+        .dropdown__description {
+            display: block;
+        }
+        .dropdown__price {
+            display: block;
+        }
+        .button_price {
+            display: block;
+        }
+    
+        .dropdown__arrow {
+            background: $color_arrow_bg_contact;
+            background-image: url("../assets/img/arrow-up.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
-
-}
-
-.dropdown__link {
-    text-decoration: none;
 }
 
 .dropdown__header {
-   
     display: flex;
     justify-content: space-between;
     align-items:center;
     text-align: left;
-}
-
-
-.dropdown__arrow {
-    width: 16px;
-    height: 16px;
-    background: $color_arrow_bg_prices;
-    background-image: url("../assets/img/prices/arrow-down.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-    cursor: pointer;
-
-
 }
 
 .dropdown__title {
@@ -122,36 +107,19 @@
     }
 }
 
-
-.dropdown-opened {
-
-    background: $color_dropdown_bg;
-    @extend %transition-long;
-
-    .dropdown__description {
-        display: block;
-    }
-    .dropdown__price {
-        display: block;
-    }
-    .button__price {
-        display: block;
-    }
-
-    .dropdown__arrow {
-
-        
-        background: $color_arrow_bg_contact;
-
-        background-image: url("../assets/img/prices/arrow-up.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-
+.dropdown__arrow {
+    width: 16px;
+    height: 16px;
+    background: $color_arrow_bg_prices;
+    background-image: url("../assets/img/arrow-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .dropdown__description {
+    display: none;
     padding-top: 6px;
     padding-bottom: 6px;
     margin-right: 6px;
@@ -161,12 +129,14 @@
     text-align: left;
     border-top: 0.5px solid $color_arrow_bg_contact; 
 }
-
 .dropdown__price {
+    display: none;
     padding-bottom: 6px;
     @include font(1.2rem, 2rem, 700);
     color: $color_additional;
-
+}
+.dropdown__link {
+    text-decoration: none;
 }
 
 .price__value {
@@ -180,7 +150,7 @@
 
 .prices__right-column {
     text-align: end;
-    padding-bottom: 63px;
+    padding-bottom: 82px;
     @include media-tablet {
         padding-top: 101px;
     }

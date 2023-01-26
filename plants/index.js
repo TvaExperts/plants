@@ -27,6 +27,9 @@ const adresses = [
 
 window.onload = function () {
 
+    fillItemsInContactSelect();
+
+
     // Burger menu 
     addBurgerClickHandler();
     addMenuLinkClickHandler();
@@ -66,7 +69,7 @@ const addMenuLinkClickHandler = () => {
     });
     
     document.addEventListener('click', e => {
-        if (! document.querySelector('.header__navigation').contains(e.target)) {
+        if (!document.querySelector('.header__navigation').contains(e.target)) {
             document.querySelector('.header__navigation').classList.remove('_open');
         }
     });
@@ -180,5 +183,48 @@ const closeAllPricesDropdowns = () => {
 /* ------------- Contacts select -------------------- */
 
 const addContactsSelectClickHandler = () => {
-    
+    const citySelect = document.querySelector('.contact-us__content');
+    citySelect.addEventListener('click', e => {
+        if (e.target.classList.contains('select__arrow')) {
+            citySelect.classList.toggle('select-opened');
+        }
+        if (e.target.classList.contains('select__city-item')) {
+            const selectedAdress = adresses.find(adress => adress.id == e.target.id);
+            const cityTitle = citySelect.querySelector('.select__title');
+            cityTitle.innerHTML = selectedAdress.city;
+            updateAdressInfoBlock(selectedAdress);
+            citySelect.classList.remove('select-opened');
+            citySelect.classList.add('city-selected');
+        }
+    })
 }
+
+document.addEventListener('click', e => {
+    if (!document.querySelector('.contact-us__content').contains(e.target)) {
+        document.querySelector('.contact-us__content').classList.remove('select-opened');
+    }
+});
+
+const generateCityDropdownItem = (adressInfo) => {
+    let adressItem = document.createElement('div');
+    adressItem.className = 'select__city-item';
+    adressItem.setAttribute('id', adressInfo.id);
+    adressItem.innerHTML = adressInfo.city;
+    return adressItem;
+}
+
+const fillItemsInContactSelect = () => {
+    const selectItems=document.querySelector('.select__dropdown');
+    adresses.forEach(adressInfo=>{
+        selectItems.append(generateCityDropdownItem(adressInfo));
+    })
+}
+
+const updateAdressInfoBlock = (adressInfo) => {
+    document.querySelector('.adress__city').innerHTML=adressInfo.city;
+    document.querySelector('.adress__phone').innerHTML=adressInfo.phone;
+    document.querySelector('.adress__office').innerHTML=adressInfo.officeAdress;
+    document.querySelector('.call__link').href=`tel:+${adressInfo.phone.replaceAll(/\D/ig,'')}`;
+}
+
+
