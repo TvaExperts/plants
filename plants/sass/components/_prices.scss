@@ -1,10 +1,10 @@
 .prices__wrapper {
-    padding: 39px 0 20px;
+    padding: 39px 50px 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     @include media-tablet {
-        padding-bottom: 75px;
+        padding-bottom: 47px;
     }
     @include media-burger {
         text-align: center;
@@ -48,8 +48,7 @@
     border: 1px solid $color_border;
     border-radius: 20px;
     @include media-mobile  { 
-       padding: 21px 0;
-       max-width: 224px;
+       width: 225px;
     }
 }
 
@@ -59,34 +58,48 @@
     padding: 15px 40px;
     background: $color_background;
     border-radius: 20px;
+    will-change: max-height;
+    height: 50px;
+    @extend %transition;
     &:last-child {
         margin-bottom: 16px;
     }
+    @include media-burger {
+        text-align: left;
+    }
     @include media-mobile  { 
         width: 180px;
-        margin: 7px 18px;
+        margin: 12px 18px;
+        padding: 16px 33px;
     }
-
     &.dropdown-opened {
-
         background: $color_dropdown_bg;
-       
-    
+        height: 152px;
+        @include media-mobile  { 
+            height: 165px;
+        }
         .dropdown__description {
-            display: block;
+            opacity: 1;
+            max-height: none;
         }
         .dropdown__price {
-            display: block;
+            opacity: 1;
+            max-height: none;
         }
         .button_price {
-            display: block;
+            opacity: 1;
+            max-height: none;
         }
-    
         .dropdown__arrow {
             background: $color_arrow_bg_contact;
             background-image: url("../assets/img/arrow-up.svg");
             background-position: center;
             background-repeat: no-repeat;
+        }
+        .dropdown__link {
+            max-height: none;
+            display: block;
+            opacity: 1;
         }
     }
 }
@@ -102,7 +115,6 @@
     @include font(2rem, 2rem, bold);
     color: $color_black;
     @include media-mobile {
-        padding-left: 30px;
         @include font(1.5rem, 2rem, bold);
     }
 }
@@ -119,7 +131,11 @@
 }
 
 .dropdown__description {
-    display: none;
+    opacity: 0;
+    overflow: hidden;
+    @extend %transition;
+    max-height: 0;
+
     padding-top: 6px;
     padding-bottom: 6px;
     margin-right: 6px;
@@ -129,14 +145,23 @@
     text-align: left;
     border-top: 0.5px solid $color_arrow_bg_contact; 
 }
+
 .dropdown__price {
-    display: none;
-    padding-bottom: 6px;
+    opacity: 0;
+    overflow: hidden;
+    @extend %transition;
+    max-height: 0;
+
     @include font(1.2rem, 2rem, 700);
     color: $color_additional;
 }
+
 .dropdown__link {
     text-decoration: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    display: none;
 }
 
 .price__value {
@@ -153,9 +178,11 @@
     padding-bottom: 82px;
     @include media-tablet {
         padding-top: 101px;
+        padding-bottom: 28px;
     }
     @include media-burger  { 
-        padding-top: 20px;
+        padding-top: 17px;
+        padding-bottom: 0;
         text-align: center;
     }
 }

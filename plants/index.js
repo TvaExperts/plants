@@ -183,18 +183,19 @@ const closeAllPricesDropdowns = () => {
 /* ------------- Contacts select -------------------- */
 
 const addContactsSelectClickHandler = () => {
+    const contactWrapper = document.querySelector('.contact-us__wrapper');
     const citySelect = document.querySelector('.contact-us__content');
     citySelect.addEventListener('click', e => {
         if (e.target.classList.contains('select__arrow')) {
-            citySelect.classList.toggle('select-opened');
+            contactWrapper.classList.toggle('select-opened');
         }
         if (e.target.classList.contains('select__city-item')) {
             const selectedAdress = adresses.find(adress => adress.id == e.target.id);
             const cityTitle = citySelect.querySelector('.select__title');
             cityTitle.innerHTML = selectedAdress.city;
             updateAdressInfoBlock(selectedAdress);
-            citySelect.classList.remove('select-opened');
-            citySelect.classList.add('city-selected');
+            contactWrapper.classList.remove('select-opened');
+            contactWrapper.classList.add('city-selected');
         }
     })
 }

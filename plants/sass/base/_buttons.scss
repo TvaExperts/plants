@@ -47,9 +47,10 @@
     }
 
     &_price {
+
         width: 86px;
         height: 25px;
-        display: none;
+        max-height: 0;
         @extend %transition;
         background: white;
         color: $color_title;

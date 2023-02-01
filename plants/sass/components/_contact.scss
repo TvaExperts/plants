@@ -14,18 +14,65 @@
     text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
+
     @include media-tablet {
-        padding-bottom: 145px;
+        padding-bottom: 234px;
         text-align: center;
         background-size: 26%;
         background-position: 51.7% 100%;
     }
     @include media-mobile {
-        padding-bottom: 14px;
+        padding-bottom: 0;
         text-align: center;
         background-size: 26.2%;
         background-position: 49.2% 100%;
     }
+
+    &.city-selected {
+        @include media-mobile {
+            background-image: none;
+        }
+
+        .adress__info {
+            display: block;
+        } 
+
+        .contact-us__select {
+            background: $color_menu_bg;
+            box-shadow: none;
+        }
+
+        .select__arrow {
+            background-color: $color_arrow_up_bg;
+        }
+
+        .select__title {
+            @include font(1.6rem, 2rem);
+        }
+
+        .contact-us__wrapper {
+            background-image: none;
+        }
+    }
+
+    &.select-opened {
+        
+        .select__dropdown {
+            display: block;
+        }
+
+        .contact-us__select {
+            background: $color_menu_bg;
+            box-shadow: none;
+        }
+        
+        .select__arrow {
+            
+            background-image: url("../assets/img/arrow-up.svg");
+            background-color: $color_arrow_up_bg;
+        }
+    }
+
 }
 
 .contact-us__title {
@@ -48,44 +95,11 @@
     text-align: right;
     display: inline-block; 
     position: relative;
-    height: 314px;
-
-    &.city-selected {
-
-        .adress__info {
-            display: block;
-        } 
-
-        .contact-us__select {
-            background: $color_menu_bg;
-            box-shadow: none;
-        }
-
-        .select__arrow {
-            background-color: $color_arrow_up_bg;
-        }
-
-        .select__title {
-            @include font(1.6rem, 2rem);
-        }
+    height: 307px;
+    @include media-burger {
+        width: 92%;
     }
-
-    &.select-opened {
-        
-        .select__dropdown {
-            display: block;
-        }
-
-        .contact-us__select {
-            background: $color_menu_bg;
-            box-shadow: none;
-        }
-        
-        .select__arrow {
-            transform: rotate(180deg);
-            background-color: $color_arrow_up_bg;
-        }
-    }
+    
 }
 
 .contact-us__select {
@@ -96,18 +110,14 @@
     align-items: center;
     background: $color_dropdown_bg;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
     @include media-tablet {
         margin: 0 auto;
-        margin-bottom: 353px;
     }
     @include media-burger {
-        width: 92%;
-        margin: 0 auto;
-        margin-bottom: 353px;
+        width: 100%;
     }
     @include media-mobile  { 
-        width: 90%;
-        margin-bottom: 243px;
     }
 }
 
@@ -136,11 +146,14 @@
 .select__dropdown {
     display: none;
     position: absolute;
-    top: 50px;
     width: 450px;
+    top: 50px;
     padding: 30px 50px 10px 20px;
     text-align: left;
     background: $color_select_dropdown_bg;
+    @include media-burger {
+        width: 100%;
+    }
 }
 
 .select__city-item {
@@ -161,33 +174,46 @@
 .adress__info {
     display: none;
     width: 448px;
-    margin-top: 47px;
-    padding: 17px 0 32px 33px;
-    background: #EDF2EC;
+    margin-top: 30px;
+    padding: 17px 33px 32px;
+    background: transparent;
     border: 1px solid #000000;
     border-radius: 20px;
+    text-align: center;
+    @include media-tablet {
+        width: 100%;
+    }
+
+    @include media-burger {
+        //padding: 10px 20px 20px;                      
+    }
+
+    @include media-mobile {
+        margin-bottom: 20px;                    
+    }
 }
 
 .adress__line {
     display: flex;
     justify-content: flex-start;
     text-align: left;
+    align-items: center;
     & p {
         flex-basis: 32%;
         @include font(1.6rem, 4rem);
         letter-spacing: 0.05em;
         color: #000000;
+        @include media-mobile {
+            padding: 5px 0;
+            @include font(1.6rem, 2rem);
+        }
     }
     & span {
         @include font(1.6rem, 4rem);
         letter-spacing: 0.05em;
         color: $color_title;
+        @include media-mobile {
+            @include font(1.6rem, 2rem);
+        }
     }
 }
-
-.call__link {
-    padding-right: 162px;
-}
-
-
-
