@@ -41,6 +41,12 @@
     }
     &_service {
         width: 161px;
+        @include media-tablet  { 
+            &:hover {
+                background: none;
+                color: $color_additional;
+            }
+        }
         @include media-mobile  { 
             width: 121px;
         }
@@ -50,7 +56,6 @@
 
         width: 86px;
         height: 25px;
-        max-height: 0;
         @extend %transition;
         background: white;
         color: $color_title;

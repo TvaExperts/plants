@@ -14,9 +14,8 @@
     text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
-
     @include media-tablet {
-        padding-bottom: 234px;
+        padding-bottom: 241px;
         text-align: center;
         background-size: 26%;
         background-position: 51.7% 100%;
@@ -27,52 +26,42 @@
         background-size: 26.2%;
         background-position: 49.2% 100%;
     }
-
     &.city-selected {
         @include media-mobile {
             background-image: none;
         }
-
         .adress__info {
             display: block;
         } 
-
         .contact-us__select {
             background: $color_menu_bg;
             box-shadow: none;
         }
-
         .select__arrow {
             background-color: $color_arrow_up_bg;
         }
-
         .select__title {
             @include font(1.6rem, 2rem);
         }
-
         .contact-us__wrapper {
             background-image: none;
         }
     }
-
     &.select-opened {
-        
         .select__dropdown {
-            display: block;
+            padding: 30px 50px 10px 20px;
+            max-height: none;
+            opacity: 1;
         }
-
         .contact-us__select {
             background: $color_menu_bg;
             box-shadow: none;
         }
-        
         .select__arrow {
-            
             background-image: url("../assets/img/arrow-up.svg");
             background-color: $color_arrow_up_bg;
         }
     }
-
 }
 
 .contact-us__title {
@@ -88,7 +77,6 @@
         padding-bottom: 80px;
         @include font(2.5rem, 3.3rem, 700);
     }
-    
 }
 
 .contact-us__content {
@@ -99,7 +87,6 @@
     @include media-burger {
         width: 92%;
     }
-    
 }
 
 .contact-us__select {
@@ -110,14 +97,11 @@
     align-items: center;
     background: $color_dropdown_bg;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
     @include media-tablet {
         margin: 0 auto;
     }
     @include media-burger {
         width: 100%;
-    }
-    @include media-mobile  { 
     }
 }
 
@@ -144,13 +128,16 @@
 }
 
 .select__dropdown {
-    display: none;
     position: absolute;
     width: 450px;
     top: 50px;
-    padding: 30px 50px 10px 20px;
+    max-height: 0;
+    padding: 0px 50px 0px 20px;
+    opacity: 0;
     text-align: left;
     background: $color_select_dropdown_bg;
+    overflow: hidden;
+    @extend %transition;
     @include media-burger {
         width: 100%;
     }
@@ -183,11 +170,6 @@
     @include media-tablet {
         width: 100%;
     }
-
-    @include media-burger {
-        //padding: 10px 20px 20px;                      
-    }
-
     @include media-mobile {
         margin-bottom: 20px;                    
     }

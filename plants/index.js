@@ -228,4 +228,4 @@ const updateAdressInfoBlock = (adressInfo) => {
     document.querySelector('.call__link').href=`tel:+${adressInfo.phone.replaceAll(/\D/ig,'')}`;
 }
 
-
+console.log('Самооценка своей работы:\n\n  Rнопки: Gardens,Lawn,Planting - происходит смена фокуса +50 \n  Accordion в секции prices +50 \n  В разделе contacts реализован select с выбором городов +25 \n\n ============================ \n Итого: 125. Баллов 100 по заданию.');
