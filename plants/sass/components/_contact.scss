@@ -10,21 +10,57 @@
 }
 
 .contact-us__wrapper {
-    padding-bottom: 352px;
+    padding-bottom: 89px;
     text-align: right;
     background-image: url("./../assets/img/contact/woman.png");
     background-repeat: no-repeat;
     @include media-tablet {
-        padding-bottom: 145px;
+        padding-bottom: 241px;
         text-align: center;
         background-size: 26%;
         background-position: 51.7% 100%;
     }
     @include media-mobile {
-        padding-bottom: 14px;
+        padding-bottom: 0;
         text-align: center;
         background-size: 26.2%;
         background-position: 49.2% 100%;
+    }
+    &.city-selected {
+        @include media-mobile {
+            background-image: none;
+        }
+        .adress__info {
+            display: block;
+        } 
+        .contact-us__select {
+            background: $color_menu_bg;
+            box-shadow: none;
+        }
+        .select__arrow {
+            background-color: $color_arrow_up_bg;
+        }
+        .select__title {
+            @include font(1.6rem, 2rem);
+        }
+        .contact-us__wrapper {
+            background-image: none;
+        }
+    }
+    &.select-opened {
+        .select__dropdown {
+            padding: 30px 50px 10px 20px;
+            max-height: none;
+            opacity: 1;
+        }
+        .contact-us__select {
+            background: $color_menu_bg;
+            box-shadow: none;
+        }
+        .select__arrow {
+            background-image: url("../assets/img/arrow-up.svg");
+            background-color: $color_arrow_up_bg;
+        }
     }
 }
 
@@ -41,51 +77,124 @@
         padding-bottom: 80px;
         @include font(2.5rem, 3.3rem, 700);
     }
-    
 }
 
-.contact-us__cities {
+.contact-us__content {
+    height: 307px;
+    text-align: right;
+    display: inline-block; 
+    position: relative;
+    @include media-burger {
+        width: 92%;
+    }
+}
+
+.contact-us__select {
     width: 450px;
     height: 50px;
-    text-align: right;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background: $color_dropdown_bg;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include media-tablet {
         margin: 0 auto;
-        margin-bottom: 353px;
     }
     @include media-burger {
-        width: 92%;
-        margin: 0 auto;
-        margin-bottom: 353px;
-    }
-    @include media-mobile  { 
-        width: 90%;
-        margin-bottom: 243px;
+        width: 100%;
     }
 }
 
-.city__title {
+.select__title {
     padding: 5px 20px;
-    @include font(2rem,4rem);
+    @include font(2rem, 4rem);
     letter-spacing: 0.05em;
     color: $color_title;
 }
 
-.city__arrow {
+.select__arrow {
     width: 16px;
     height: 16px;
     margin-right: 35px;
     background: $color_arrow_bg_contact;
-    background-image: url("../assets/img/contact/arrow.svg");
+    background-image: url("../assets/img/arrow-down-white.svg");
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px;
     cursor: pointer;
     @include media-mobile {
         margin-right: 20px;
+    }
+}
+
+.select__dropdown {
+    position: absolute;
+    width: 450px;
+    top: 50px;
+    max-height: 0;
+    padding: 0px 50px 0px 20px;
+    opacity: 0;
+    text-align: left;
+    background: $color_select_dropdown_bg;
+    overflow: hidden;
+    @extend %transition;
+    @include media-burger {
+        width: 100%;
+    }
+}
+
+.select__city-item {
+    padding-left: 6px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $color_arrow_bg_prices;
+    @include font(1.6rem, 4rem);
+    letter-spacing: 0.05em;
+    color: $color_primary;
+    cursor: pointer;
+    &:hover {
+        color: $color_title;
+        border-bottom: 1px solid $color_title;
+    }
+}
+
+.adress__info {
+    width: 448px;
+    margin-top: 30px;
+    padding: 17px 33px 32px;
+    display: none;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    @include media-tablet {
+        width: 100%;
+    }
+    @include media-mobile {
+        margin-bottom: 20px;                    
+    }
+}
+
+.adress__line {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+    & p {
+        flex-basis: 32%;
+        @include font(1.6rem, 4rem);
+        letter-spacing: 0.05em;
+        color: #000000;
+        @include media-mobile {
+            padding: 5px 0;
+            @include font(1.6rem, 2rem);
+        }
+    }
+    & span {
+        @include font(1.6rem, 4rem);
+        letter-spacing: 0.05em;
+        color: $color_title;
+        @include media-mobile {
+            @include font(1.6rem, 2rem);
+        }
     }
 }

@@ -41,11 +41,65 @@
     }
     &_service {
         width: 161px;
+        @include media-tablet  { 
+            &:hover {
+                background: none;
+                color: $color_additional;
+            }
+        }
         @include media-mobile  { 
             width: 121px;
         }
     }
+
+    &_price {
+
+        width: 86px;
+        height: 25px;
+        @extend %transition;
+        background: white;
+        color: $color_title;
+        @extend %font-primary;
+        @include font(1.4rem, 2rem, 700);
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background: $color_additional;
+            color: white;
+        }
+    }
+
+    &_call {
+        width: 122px;
+        height: 26px;
+        padding: 0;
+        margin-top: 19px;
+        @include font(1rem, 1.3rem, 700);
+        color: $color_title;
+    }
+
+
+    &.button-on {
+        background: $color_additional;
+        color: white;
+    }
+    &.button-inactive {
+        background:none;
+        color: $color_title;
+        border-color: $color_title;
+        cursor: auto;
+        &:hover {
+            background: none;
+            color: $color_title;
+        }
+    }
+
 }
+
+
+
 
 
 

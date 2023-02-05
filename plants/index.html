@@ -8,9 +8,9 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/style.css">
-    <script src="./index.js"></script>
+    
 </head>
 <body>
     <header class="header">
@@ -37,7 +37,7 @@
                         <a href="#contact" class="navigation__link">Contacts</a>
                     </li>
                 </ul>
-                <div class="header__burger" id="burger">
+                <div class="header__burger">
                     <span></span>
                 </div>
             </nav>
@@ -82,7 +82,7 @@
                         <img class="card__img" src="./assets/img/service/1.jpg" alt="Service 1">
                         <img class="card__img-tablet" src="./assets/img/service/1-tablet.jpg" alt="Service 1">
                         <div class="card__content">
-                            <h3>Garden care</h3>
+                            <h3 class="card__caption">Garden care</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                         <img class="card__img" src="./assets/img/service/2.jpg" alt="Service 2">
                         <img class="card__img-tablet" src="./assets/img/service/2-tablet.jpg" alt="Service 2">
                         <div class="card__content">
-                            <h3>Planting</h3>
+                            <h3 class="card__caption">Planting</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         <img class="card__img" src="./assets/img/service/3.jpg" alt="Service 3">
                         <img class="card__img-tablet" src="./assets/img/service/3-tablet.jpg" alt="Service 3">
                         <div class="card__content">
-                            <h3>Lawn care</h3>
+                            <h3 class="card__caption">Lawn care</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                         <img class="card__img" src="./assets/img/service/4.jpg" alt="Service 4">
                         <img class="card__img-tablet" src="./assets/img/service/4-tablet.jpg" alt="Service 4">
                         <div class="card__content">
-                            <h3>Planting</h3>
+                            <h3 class="card__caption">Planting</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                         <img class="card__img" src="./assets/img/service/5.jpg" alt="Service 5">
                         <img class="card__img-tablet" src="./assets/img/service/5-tablet.jpg" alt="Service 5">
                         <div class="card__content">
-                            <h3>Garden care</h3>
+                            <h3 class="card__caption">Garden care</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                         <img class="card__img" src="./assets/img/service/6.jpg" alt="Service 6">
                         <img class="card__img-tablet" src="./assets/img/service/6-tablet.jpg" alt="Service 6">
                         <div class="card__content">
-                            <h3>Planting</h3>
+                            <h3 class="card__caption">Planting</h3>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -135,13 +135,34 @@
                     <h2 class="prices__title">Prices</h2>
                     <div class="prices__dropdowns">
                         <div class="dropdown">
-                            <p class="dropdown__title">Basics</p><span class="dropdown__arrow"></span>
+                            <div class="dropdown__header">
+                                <p class="dropdown__title">Basics</p><span class="dropdown__arrow"></span>
+                            </div>
+                            <div class="dropdown__content">
+                                <div class="dropdown__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</div>
+                                <div class="dropdown__price">$<span class="price__value">15</span><span class="price__hour"> / per hour</span></div>
+                                <a href="#contact" class="dropdown__link"><button class="button_price">Order</button></a>
+                            </div>
                         </div>
                         <div class="dropdown">
-                            <p class="dropdown__title">Standard</p><span class="dropdown__arrow"></span>
+                            <div class="dropdown__header">
+                                <p class="dropdown__title">Standard</p><span class="dropdown__arrow"></span>
+                            </div>
+                            <div class="dropdown__content">
+                                <div class="dropdown__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</div>
+                                <div class="dropdown__price">$<span class="price__value">25</span><span class="price__hour"> / per hour</span></div>
+                                <a href="#contact" class="dropdown__link"><button class="button_price">Order</button></a>
+                            </div>
                         </div>
                         <div class="dropdown">
-                            <p class="dropdown__title">Pro care </p><span class="dropdown__arrow"></span>
+                            <div class="dropdown__header">
+                                <p class="dropdown__title">Pro care</p><span class="dropdown__arrow"></span>
+                            </div>
+                            <div class="dropdown__content">
+                                <div class="dropdown__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</div>
+                                <div class="dropdown__price">$<span class="price__value">35</span><span class="price__hour"> / per hour</span></div>
+                                <a href="#contact" class="dropdown__link"><button class="button_price">Order</button></a>
+                            </div>                                                                                  
                         </div>
                     </div>
                 </div>
@@ -159,9 +180,26 @@
         <section class="contact-us" id="contact">
             <div class="wrapper contact-us__wrapper">
                 <h2 class="contact-us__title">Contact us</h2>
-                <div class="contact-us__cities">
-                    <p class="city__title">City</p><span class="city__arrow"></span>
-                </div>
+                <div class="contact-us__content">
+                    <div class="contact-us__select">
+                        <p class="select__title">City</p><span class="select__arrow"></span>
+                    </div>
+                    <div class="select__dropdown"><!--JS Items--></div>
+                    <div class="adress__info">
+                        <div class="adress__line">
+                            <p>City:</p><span class="adress__city">Canandaigua, NY</span>
+                        </div>
+                        <div class="adress__line">
+                            <p>Phone:</p><span class="adress__phone">+1	585	393 0001</span>
+                        </div>
+                        <div class="adress__line">
+                            <p>Office adress:</p><span class="adress__office">151 Charlotte Street</span>
+                        </div>
+                        <a href="tel:+79998887744" class="call__link">
+                            <button class="button button_call">Call us</button>
+                        </a>
+                    </div>
+                </div>  
             </div>
         </section>
     </main>
@@ -212,4 +250,5 @@
         </div>
     </footer>
 </body>
+<script src="./index.js"></script>
 </html>
