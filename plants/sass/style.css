@@ -791,11 +791,11 @@ h3 {
 }
 @media (max-width: 659px) {
   .prices__wrapper {
-    text-align: center;
     padding-top: 25px;
     padding-bottom: 40px;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -876,8 +876,8 @@ h3 {
   }
 }
 .dropdown.dropdown-opened {
-  background: #D6E7D2;
   height: 152px;
+  background: #D6E7D2;
 }
 @media (max-width: 380px) {
   .dropdown.dropdown-opened {
@@ -1190,10 +1190,10 @@ h3 {
 }
 
 .contact-us__content {
+  height: 307px;
   text-align: right;
   display: inline-block;
   position: relative;
-  height: 307px;
 }
 @media (max-width: 659px) {
   .contact-us__content {
@@ -1283,10 +1283,10 @@ h3 {
 }
 
 .adress__info {
-  display: none;
   width: 448px;
   margin-top: 30px;
   padding: 17px 33px 32px;
+  display: none;
   background: transparent;
   border: 1px solid #000000;
   border-radius: 20px;
@@ -1445,10 +1445,10 @@ h3 {
 }
 
 .contact-us__content {
+  height: 307px;
   text-align: right;
   display: inline-block;
   position: relative;
-  height: 307px;
 }
 @media (max-width: 659px) {
   .contact-us__content {
@@ -1538,10 +1538,10 @@ h3 {
 }
 
 .adress__info {
-  display: none;
   width: 448px;
   margin-top: 30px;
   padding: 17px 33px 32px;
+  display: none;
   background: transparent;
   border: 1px solid #000000;
   border-radius: 20px;
